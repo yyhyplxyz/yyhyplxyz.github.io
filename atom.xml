@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yyhyplxyz.github.io/"/>
-  <updated>2018-01-26T16:25:14.000Z</updated>
+  <updated>2018-01-26T16:30:05.000Z</updated>
   <id>http://yyhyplxyz.github.io/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>大明1556</title>
+    <link href="http://yyhyplxyz.github.io/2018/01/27/%E5%A4%A7%E6%98%8E1556/"/>
+    <id>http://yyhyplxyz.github.io/2018/01/27/大明1556/</id>
+    <published>2018-01-26T16:26:08.000Z</published>
+    <updated>2018-01-26T16:30:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>当国家（政府）有难时，牺牲的一定是平民百姓或商人。</p><p>（当民情汹涌时，）为了社会稳定，政府一定会牺牲政治斗争失败的官员或商人。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;当国家（政府）有难时，牺牲的一定是平民百姓或商人。&lt;/p&gt;
+&lt;p&gt;（当民情汹涌时，）为了社会稳定，政府一定会牺牲政治斗争失败的官员或商人。&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>东野圭吾的《白金数据》</title>
     <link href="http://yyhyplxyz.github.io/2018/01/26/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE%E7%9A%84%E3%80%8A%E7%99%BD%E9%87%91%E6%95%B0%E6%8D%AE%E3%80%8B/"/>
     <id>http://yyhyplxyz.github.io/2018/01/26/东野圭吾的《白金数据》/</id>
     <published>2018-01-26T15:56:06.000Z</published>
-    <updated>2018-01-26T16:25:14.000Z</updated>
+    <updated>2018-01-26T16:29:58.000Z</updated>
     
     <content type="html"><![CDATA[<p>考完试后回到家里，闲来无事便读了一个下午读完了这本新出的侦探小说。比较符合我对东野圭吾的预期，小说很有悬念，比较刺激，但文学性和思想性不足，只是消遣性读物。</p><p>后面会涉及严重剧透=======================================</p><p>故事主要描述了日本想全国范围内收集民众的DNA数据，从而通过罪犯遗留下来的任何可能携带基因的物品，达到快速找到罪犯亲属或罪犯的目的。但这样巨大的工程容易造成民众隐私的泄漏，同时在小说中通过一系列无法通过基因数据库找到罪犯消息的犯罪案件和主角的被嫁祸，几个重要配角的反转，揭示了政府重要官员在数据库中做的手脚——他们的亲属犯罪将无法通过基因匹配找到罪犯的信息，自然的也将无法通过基因匹配查到他们身上。</p><p>这些政府官员的数据就是白金数据。</p><p>小说想向我们揭示大数据技术下个人隐私泄漏的可能，这不过是老生常谈。支付宝之前的年度账单事件就拔出萝卜带着泥，牵扯了一大批不合理读取用户个人数据的app。可以想象对掌控着我们所有社交信息的腾讯公司而言，我们几乎就是白纸一张，一切都能被人一眼望到底。</p><p>作者还想引起我们的思考，人心到底是不是完全物质化的呢？毕竟激素，神经递质，他们主宰着我们的情绪和思想。随着技术的进步，我们完全可以人造情感和思想。无奈太过浅尝辄止，作者本身并没有通过故事深入讨论这个话题。</p><p>东野圭吾应该也试图展示政府高级官员的龌龊。太阳底下没有新鲜事，全国范围内收集民众的DNA数据是一个涉及法律和公安执法的变革，历朝历代的变革根本目的都是更好地维护统治阶级的利益。屁股决定脑袋，换成说是日本政坛大佬都会这样做的。君王一怒，伏尸百万，流血漂橹。相比之下，放点儿白金数据都是小儿科的了。网上不就有纪录片和帖子讨论朴槿惠为了邪教献祭牺牲了岁月号三百多名学生的事情吗？想想令人毛骨悚然，但再想想史书不绝于笔的“族”，又为之泰然。<a href="https://www.zhihu.com/question/52059063" target="_blank" rel="noopener">详情</a></p>]]></content>
     
@@ -52,6 +75,27 @@
       
       
         &lt;h2 id=&quot;问题描述&quot;&gt;&lt;a href=&quot;#问题描述&quot; class=&quot;headerlink&quot; title=&quot;问题描述&quot;&gt;&lt;/a&gt;问题描述&lt;/h2&gt;&lt;p&gt;在kaggle上有一个竞赛题目，是如何根据泰坦尼克号上的已知的乘客数据来预测某一乘客在该轮船上能否存活。&lt;a href=&quot;h
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>python作图</title>
+    <link href="http://yyhyplxyz.github.io/2018/01/25/python%E4%BD%9C%E5%9B%BE/"/>
+    <id>http://yyhyplxyz.github.io/2018/01/25/python作图/</id>
+    <published>2018-01-25T03:11:19.000Z</published>
+    <updated>2018-01-26T16:29:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="导论"><a href="#导论" class="headerlink" title="导论"></a>导论</h2><p>作图工具如恒河沙数，最好用的就是excel的图表功能，还有powermap这样强大的插件，可以非常轻松的解决工作制作报表的问题。但是excel的图表自定义功能并不够强大，在工程和数据科学领域，excle也捉襟见肘。相比之下matlab，mathmeticas这样的商业软件就非常优秀了，然而我偏不它们。我接下来要讲的是python中的Matplotlib和seaborn这样的函数库。</p><h2 id="Matplotlib"><a href="#Matplotlib" class="headerlink" title="Matplotlib"></a>Matplotlib</h2><p>在 Matplotlib 中，大部分图形样式的绘制方法都存在于 pyplot 模块中，一共有160多种图表绘制方法。</p><h3 id="2D图绘制"><a href="#2D图绘制" class="headerlink" title="2D图绘制"></a>2D图绘制</h3><p>我们首先用接下来的代码来引用科学计算函数库numpy和图形绘制库matplotlib</p><p>用npm可以很简单地安装好啦，我就不多说了。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib <span class="keyword">as</span> plt</span><br></pre></td></tr></table></figure><p>然后我们来用下面的代码生成数据</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">X = np.linspace(<span class="number">-2</span>*np.pi,<span class="number">2</span>*np.pi,<span class="number">1000</span>) <span class="comment">#在-2*np.pi和2*np.pi之间等间隔的生成1000个数据点，X就是一个np 数组</span></span><br><span class="line">Y = np.sin(X)<span class="comment">#Y也是一个数组，对应了X的sin值</span></span><br></pre></td></tr></table></figure><p>接着我们键入一下代码，分别生成线型图，柱形图和散点图</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plt.pyplot.plot(X,Y)</span><br><span class="line">plt.pyplot.bar(X,Y)</span><br><span class="line">plt.pyplot.scatter(X,Y)</span><br></pre></td></tr></table></figure><p>输出如下</p><p>再接着我们可以尝试着画饼状图，量场图和等高线图</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">z = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line">plt.pyplot.pie(z)<span class="comment">#饼被分成三块，每块的相对面积大小是1，2，3</span></span><br><span class="line">X, y = np.mgrid[<span class="number">0</span>:<span class="number">10</span>, <span class="number">0</span>:<span class="number">10</span>]<span class="comment">#表示的是一个矩阵</span></span><br><span class="line">plt.pyplot.quiver(X, y)</span><br></pre></td></tr></table></figure><p>图形输出如下</p><p>这样子的功能其实excel也可以实现，还比python要简单，下面是体现python强大的图形自定义功能的时刻到啦</p><h4 id="线型图"><a href="#线型图" class="headerlink" title="线型图"></a>线型图</h4><p>线型图通过 matplotlib.pyplot.plot(<em>args, *</em>kwargs) 方法绘出。其中，args 代表数据输入，而 kwargs 的部分就是用于设置样式参数了。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">X = np.linspace(<span class="number">-2</span> * np.pi, <span class="number">2</span> * np.pi, <span class="number">1000</span>)</span><br><span class="line"><span class="comment"># 计算 sin() 对应的纵坐标</span></span><br><span class="line">y1 = np.sin(X)</span><br><span class="line"><span class="comment"># 计算 cos() 对应的纵坐标</span></span><br><span class="line">y2 = np.cos(X)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 向方法中 `*args` 输入 X，y 坐标</span></span><br><span class="line">plt.pyplot.plot(X, y1, color=<span class="string">'r'</span>, linestyle=<span class="string">'--'</span>, linewidth=<span class="number">2</span>, alpha=<span class="number">0.8</span>)</span><br><span class="line">plt.pyplot.plot(X, y2, color=<span class="string">'b'</span>, linestyle=<span class="string">'-'</span>, linewidth=<span class="number">2</span>)</span><br></pre></td></tr></table></figure><p>我们就能见到这样漂亮的图拉</p><p>样式参数有很多，具体的可以见下表，更具体的麻烦查阅下官方文档</p><p><img src="../image/yangshi2.png" alt="git"></p><p><img src="../image/yangshi3.png" alt="git"></p><p><img src="../image/yangshi4.png" alt="git"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;导论&quot;&gt;&lt;a href=&quot;#导论&quot; class=&quot;headerlink&quot; title=&quot;导论&quot;&gt;&lt;/a&gt;导论&lt;/h2&gt;&lt;p&gt;作图工具如恒河沙数，最好用的就是excel的图表功能，还有powermap这样强大的插件，可以非常轻松的解决工作制作报表的问题。但是exce
       
     
     </summary>
