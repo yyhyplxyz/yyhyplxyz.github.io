@@ -111,17 +111,37 @@
 
 
 
-<meta name="description" content="第一个文章">
+<meta name="description" content="问题描述在kaggle上有一个竞赛题目，是如何根据泰坦尼克号上的已知的乘客数据来预测某一乘客在该轮船上能否存活。题目本身就是一道供初学者进行数据分析学习的问题，也有很多大佬给出了自己的数据训练的tutorial，自己就在这里分享下自己在借鉴了一些大佬的经验之后给出的自己的解决方案。 解决流程数据清洗数据清洗是所有数据分析问题第一步要解决的，我们首先来看下官方对数据集的说明。  PassengerI">
 <meta property="og:type" content="article">
-<meta property="og:title" content="文章标题">
-<meta property="og:url" content="http://yyhyplxyz.github.io/2018/01/23/文章标题/index.html">
+<meta property="og:title" content="利用随机森林法预测Titanic乘客生存率">
+<meta property="og:url" content="http://yyhyplxyz.github.io/2018/01/26/利用随机森林法预测Titanic乘客生存率/index.html">
 <meta property="og:site_name" content="元昊的博客">
-<meta property="og:description" content="第一个文章">
+<meta property="og:description" content="问题描述在kaggle上有一个竞赛题目，是如何根据泰坦尼克号上的已知的乘客数据来预测某一乘客在该轮船上能否存活。题目本身就是一道供初学者进行数据分析学习的问题，也有很多大佬给出了自己的数据训练的tutorial，自己就在这里分享下自己在借鉴了一些大佬的经验之后给出的自己的解决方案。 解决流程数据清洗数据清洗是所有数据分析问题第一步要解决的，我们首先来看下官方对数据集的说明。  PassengerI">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-23T04:37:29.000Z">
+<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/7.png">
+<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/4.png">
+<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/5.png">
+<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/6.png">
+<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/8.png">
+<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/9.png">
+<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/10.png">
+<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/11.png">
+<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/12.png">
+<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/14.png">
+<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/15.png">
+<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/13.png">
+<meta property="og:image" content="http://img.blog.csdn.net/20160523164415904">
+<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/2018-1-251.png">
+<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/2018-1-25.png">
+<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/2018-1-253.png">
+<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/2018-1-254.png">
+<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/2018-1-255.png">
+<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/2018-1-257.png">
+<meta property="og:updated_time" content="2018-01-26T13:28:11.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="文章标题">
-<meta name="twitter:description" content="第一个文章">
+<meta name="twitter:title" content="利用随机森林法预测Titanic乘客生存率">
+<meta name="twitter:description" content="问题描述在kaggle上有一个竞赛题目，是如何根据泰坦尼克号上的已知的乘客数据来预测某一乘客在该轮船上能否存活。题目本身就是一道供初学者进行数据分析学习的问题，也有很多大佬给出了自己的数据训练的tutorial，自己就在这里分享下自己在借鉴了一些大佬的经验之后给出的自己的解决方案。 解决流程数据清洗数据清洗是所有数据分析问题第一步要解决的，我们首先来看下官方对数据集的说明。  PassengerI">
+<meta name="twitter:image" content="http://p35v64prn.bkt.clouddn.com/7.png">
 
 
 
@@ -151,13 +171,13 @@
 
 
 
-  <link rel="canonical" href="http://yyhyplxyz.github.io/2018/01/23/文章标题/"/>
+  <link rel="canonical" href="http://yyhyplxyz.github.io/2018/01/26/利用随机森林法预测Titanic乘客生存率/"/>
 
 
 
 
 
-  <title>文章标题 | 元昊的博客</title>
+  <title>利用随机森林法预测Titanic乘客生存率 | 元昊的博客</title>
   
 
 
@@ -308,7 +328,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yyhyplxyz.github.io/2018/01/23/文章标题/">
+    <link itemprop="mainEntityOfPage" href="http://yyhyplxyz.github.io/2018/01/26/利用随机森林法预测Titanic乘客生存率/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jack Yang">
@@ -325,7 +345,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">文章标题</h1>
+          <h1 class="post-title" itemprop="name headline">利用随机森林法预测Titanic乘客生存率</h1>
         
 
         <div class="post-meta">
@@ -337,8 +357,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-23T12:33:39+08:00">
-                2018-01-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-26T19:50:06+08:00">
+                2018-01-26
               </time>
             
 
@@ -355,7 +375,7 @@
 
           
           
-             <span id="/2018/01/23/文章标题/" class="leancloud_visitors" data-flag-title="文章标题">
+             <span id="/2018/01/26/利用随机森林法预测Titanic乘客生存率/" class="leancloud_visitors" data-flag-title="利用随机森林法预测Titanic乘客生存率">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -381,7 +401,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  5
+                  3,163
                 </span>
               
 
@@ -397,7 +417,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  13
                 </span>
               
             </div>
@@ -418,7 +438,134 @@
       
 
       
-        <h2 id="第一个文章"><a href="#第一个文章" class="headerlink" title="第一个文章"></a>第一个文章</h2>
+        <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在kaggle上有一个竞赛题目，是如何根据泰坦尼克号上的已知的乘客数据来预测某一乘客在该轮船上能否存活。<a href="https://www.kaggle.com/c/titanic" target="_blank" rel="noopener">题目</a>本身就是一道供初学者进行数据分析学习的问题，也有很多大佬给出了自己的数据训练的tutorial，自己就在这里分享下自己在借鉴了一些大佬的经验之后给出的自己的解决方案。</p>
+<h2 id="解决流程"><a href="#解决流程" class="headerlink" title="解决流程"></a>解决流程</h2><h3 id="数据清洗"><a href="#数据清洗" class="headerlink" title="数据清洗"></a>数据清洗</h3><p>数据清洗是所有数据分析问题第一步要解决的，我们首先来看下官方对数据集的说明。</p>
+<ul>
+<li>PassengerId: 编号 </li>
+<li>Survived: 0 = 死亡，1 = 生存</li>
+<li>Pclass: 船票级别 1 = 高级， 2 = 中等， 3 = 低等</li>
+<li>Name: 名称</li>
+<li>Sex: male = 男性，female = 女性</li>
+<li>Age: 年龄</li>
+<li>SibSp: 在 Titanic 上的兄弟姐妹以及配偶的人数</li>
+<li>Parch: 在 Titanic 上的父母以及子女的人数</li>
+<li>Ticket: 船票编号</li>
+<li>Fare: 工资</li>
+<li>Cabin: 所在的船舱</li>
+<li>Embarked: 登船的港口 C = Cherbourg, Q = Queenstown, S = Southampton</li>
+</ul>
+<p>接下来我们让我们读取数据并对数据有一个初步的感性认识。</p>
+<p>我们首先来做定性分析，看一下特征类别分布是否平衡。类别平衡指分类样例不同类别的训练样例数目差别不大。当差别很大时，为类别不平衡。当类别不平衡的时候，例如正反比为 9:1，学习器将所有样本判别为正例的正确率都能达到 0.9。这时候，我们就需要使用 “再缩放”、“欠采样”、“过采样”、“阈值移动” 等方法。如下图，我们发现总体而言还是特征分布还是平衡的，活下来的人和死亡人数没有偏差过多。</p>
+<h4 id="删除无必要数据"><a href="#删除无必要数据" class="headerlink" title="删除无必要数据"></a>删除无必要数据</h4><h4 id="空数据处理"><a href="#空数据处理" class="headerlink" title="空数据处理"></a>空数据处理</h4><p>我们来看看有多少空数据</p>
+<p>对空数据我们怎么处理呢，这就要分情况讨论啦。</p>
+<h6 id="Age"><a href="#Age" class="headerlink" title="Age"></a>Age</h6><p>作图 Age ~ Survived。年龄较小的孩子生存的几率大。<img src="http://p35v64prn.bkt.clouddn.com/7.png" alt="git"></p>
+<p>因为年龄是一个连续值，而且他会对预测结果产生影响，同时我们发现不同群体中年龄的分布是不同的。<img src="http://p35v64prn.bkt.clouddn.com/4.png" alt="git"><img src="http://p35v64prn.bkt.clouddn.com/5.png" alt="git"></p>
+<p><img src="http://p35v64prn.bkt.clouddn.com/6.png" alt="git"></p>
+<p>因此我们根据票的等级，在 Titanic 上的兄弟姐妹以及配偶的人数，在 Titanic 上的父母以及子女的人数来将数据分为不同的集合，再用缺失数据所在集合的平均值来进行填充。并判断最后的对 Age ~ Survived 的性质并未产生影响。<img src="http://p35v64prn.bkt.clouddn.com/8.png" alt="git"></p>
+<h5 id="Embarked"><a href="#Embarked" class="headerlink" title="Embarked"></a>Embarked</h5><p>它缺少的数据只有两个，直接用众数填充即可。<img src="http://p35v64prn.bkt.clouddn.com/9.png" alt="git"></p>
+<h5 id="Cabin"><a href="#Cabin" class="headerlink" title="Cabin"></a>Cabin</h5><p>他的数据较为复杂，Cabin 特征值由字母开头，判断船舱按字母分为A，B，C…</p>
+<p>于是我们仅提取字母编号，降低维度。然后使用新的字母‘U’填充缺失数据。我们发现缺失数据的游客主要是三等舱的，并且这部分游客的生存率相对较低。<img src="http://p35v64prn.bkt.clouddn.com/10.png" alt="git"></p>
+<p><img src="http://p35v64prn.bkt.clouddn.com/11.png" alt="git"></p>
+<h4 id="数值化和标准化"><a href="#数值化和标准化" class="headerlink" title="数值化和标准化"></a>数值化和标准化</h4><h5 id="数值化"><a href="#数值化" class="headerlink" title="数值化"></a>数值化</h5><p>Ticket 特征值中的一串数字编号对我们没有意义，忽略。下面代码中，我们用正则表达式过滤掉这串数字，并使用 pandas get_dummies 函数进行数值化（以 Ticket 特征值 作为新的特征，0,1 作为新的特征值）。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">Ticket=[]</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line">r=re.compile(<span class="string">r'\w*'</span>)<span class="comment">#正则表达式，查找所有单词字符[a-z/A-Z/0-9]</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> data[<span class="string">'Ticket'</span>]:</span><br><span class="line">    sp=i.split(<span class="string">' '</span>)<span class="comment">#拆分空格前后字符串，返回列表</span></span><br><span class="line">    <span class="keyword">if</span> len(sp)==<span class="number">1</span>:</span><br><span class="line">       Ticket.append(<span class="string">'U'</span>)<span class="comment">#对于只有一串数字的 Ticket，Ticket 增加字符 'U'</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">       t=r.findall(sp[<span class="number">0</span>])<span class="comment">#查找所有单词字符，忽略符号，返回列表</span></span><br><span class="line">       Ticket.append(<span class="string">''</span>.join(t))<span class="comment">#将 t 中所有字符串合并</span></span><br><span class="line">data[<span class="string">'Ticket'</span>]=Ticket</span><br><span class="line">data=pd.get_dummies(data,columns=[<span class="string">'Ticket'</span>],prefix=<span class="string">'T'</span>)<span class="comment">#get_dummies：如果DataFrame的某一列中含有k个不同的值，则可以派生出一个k列矩阵或DataFrame（其值全为1和0）</span></span><br></pre></td></tr></table></figure>
+<p>getdummies是处理类别醒数据很好的一种方式，这样我们可以将离散的分类变成具体的0，1特征向量，很大程度的加速了电脑计算的速度和监督学习最后训练得到的准确率。对cabin和embarked同样做此操作。最后得到的特征向量如图</p>
+<p><img src="http://p35v64prn.bkt.clouddn.com/12.png" alt="git"></p>
+<h5 id="标准化"><a href="#标准化" class="headerlink" title="标准化"></a>标准化</h5><h6 id="偏态分布"><a href="#偏态分布" class="headerlink" title="偏态分布"></a>偏态分布</h6><p>偏态分布的数据有时不利于模型发现数据中的规律，我们可以使用 Log Transformation 来处理数据，这样可以提高训练的准确度。比如Fare这一特征就存在明显的偏态分布，我们skitlearn提供的函数进行处理，参考 <a href="http://www.statisticshowto.com/probability-and-statistics/skewed-distribution/" target="_blank" rel="noopener">Skewed Distribution and Log Transformation</a></p>
+<p><img src="http://p35v64prn.bkt.clouddn.com/14.png" alt="git"></p>
+<p><img src="http://p35v64prn.bkt.clouddn.com/15.png" alt="git"></p>
+<h6 id="离群点删除"><a href="#离群点删除" class="headerlink" title="离群点删除"></a>离群点删除</h6><p>离群点是显著偏离数据集中其余对象的点。离群点来源于操作失误，数据本身的可变性等。我们这里采用箱线法,检测特征 [‘Age’, ‘Parch’, ‘SibSp’, ‘Fare’]的离群点。参考<a href="http://blog.csdn.net/littlely_ll/article/details/68486537" target="_blank" rel="noopener">离群点和箱线法</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> collections <span class="keyword">import</span> Counter</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">outlier_detect</span><span class="params">(n, df, features)</span>:</span><span class="comment">#定义函数 outlier_detect 探测离群点，输入变量 n, df, features，返回 outlier</span></span><br><span class="line">    outlier_index = []</span><br><span class="line">    <span class="keyword">for</span> feature <span class="keyword">in</span> features:</span><br><span class="line">        Q1 = np.percentile(df[feature], <span class="number">25</span>)<span class="comment">#计算上四分位数（1/4）</span></span><br><span class="line">        Q3 = np.percentile(df[feature], <span class="number">75</span>)<span class="comment">#计算下四分位数（3/4）</span></span><br><span class="line">        IQR = Q3 - Q1</span><br><span class="line">        outlier_span = <span class="number">1.5</span> * IQR</span><br><span class="line">        col = ((data[data[feature] &gt; Q3 + outlier_span]) |</span><br><span class="line">               (data[data[feature] &lt; Q1 - outlier_span])).index</span><br><span class="line">        outlier_index.extend(col)</span><br><span class="line">        print(<span class="string">'%s: %f (Q3+1.5*IQR) , %f (Q1-1.5*QIR) )'</span> %</span><br><span class="line">              (feature, Q3 + outlier_span, Q1 - outlier_span))</span><br><span class="line">    outlier_index = Counter(outlier_index)<span class="comment">#计数</span></span><br><span class="line">    outlier = list(i <span class="keyword">for</span> i, j <span class="keyword">in</span> outlier_index.items() <span class="keyword">if</span> j &gt;= n)</span><br><span class="line">    print(<span class="string">'number of outliers: %d'</span> % len(outlier))</span><br><span class="line">    print(df[[<span class="string">'Age'</span>, <span class="string">'Parch'</span>, <span class="string">'SibSp'</span>, <span class="string">'Fare'</span>]].loc[outlier])</span><br><span class="line">    <span class="keyword">return</span> outlier</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">outlier = outlier_detect(<span class="number">3</span>, data, [<span class="string">'Age'</span>, <span class="string">'Parch'</span>, <span class="string">'SibSp'</span>, <span class="string">'Fare'</span>])<span class="comment">#调用函数 outlier_detect</span></span><br><span class="line">data = data.drop(outlier)</span><br></pre></td></tr></table></figure>
+<p><img src="http://p35v64prn.bkt.clouddn.com/13.png" alt="git"></p>
+<h3 id="模型选择与训练"><a href="#模型选择与训练" class="headerlink" title="模型选择与训练"></a>模型选择与训练</h3><h4 id="模型介绍"><a href="#模型介绍" class="headerlink" title="模型介绍"></a>模型介绍</h4><h6 id="Boosting模型与bagging模型"><a href="#Boosting模型与bagging模型" class="headerlink" title="Boosting模型与bagging模型"></a>Boosting模型与bagging模型</h6><p>Bagging：假设我有一个大小为n的训练集D，bagging会从D中有放回的均匀地抽样，假设我用bagging生成了m个新的训练集Di，每个Di的大小为j。由于我有放回的进行抽样，那么在Di中的样本有可能是重复的。如果j=n，这种取样称为bootstrap取样。现在，我们可以用上面的m个训练集来拟合m个模型，然后结合这些模型进行预测。对于回归问题来说，我们平均这些模型的输出;对于分类问题来说，我们进行投票（voting）。</p>
+<p>Boosting：Boosting与Bagging主要的不同是：Boosting的base分类器是按顺序训练的（in sequence），训练每个base分类器时所使用的训练集是加权重的，而训练集中的每个样本的权重系数取决于前一个base分类器的性能。如果前一个base分类器错误分类地样本点，那么这个样本点在下一个base分类器训练时会有一个更大的权重。一旦训练完所有的base分类器，我们组合所有的分类器给出最终的预测结果。过程如下图：</p>
+<p><img src="http://img.blog.csdn.net/20160523164415904" alt="git"></p>
+<h6 id="Adaboost与RandomForest算法"><a href="#Adaboost与RandomForest算法" class="headerlink" title="Adaboost与RandomForest算法"></a>Adaboost与RandomForest算法</h6><p>Adaboost是一种基于boosting模型的迭代算法，其核心思想是针对同一个训练集训练不同的<a href="http://baike.baidu.com/view/895803.htm" target="_blank" rel="noopener">分类器</a>(弱分类器)，然后把这些弱分类器集合起来，构成一个更强的最终分类器（强分类器）。</p>
+<p>Adaboost的结构:最后的分类器YM是由数个弱分类器（weak classifier）组合而成的,相当于最后m个弱分类器来投票决定分类结果，而且每个弱分类器的“话语权”因子α大小不一样。</p>
+<p>Randomforest是基于bangging模型实现的，他的元分类器是决策树。过程简要概括如下：</p>
+<ol>
+<li>从原始训练集中进行bootstrap抽样</li>
+<li>用步骤1中的bootstrap样本生成决策树<ul>
+<li>随机选择特征子集</li>
+<li>用上面的特征子集来拆分树的节点</li>
+</ul>
+</li>
+<li>重复1和2两个步骤</li>
+<li>集成所有生成的决策树进行预测</li>
+</ol>
+<h4 id="模型评估"><a href="#模型评估" class="headerlink" title="模型评估"></a>模型评估</h4><p>我们采用k 折交叉验证法，更具体的是10 折交叉验证法。</p>
+<ul>
+<li>k 折交叉验证（k-fold cross validation）：将 D 划分 k 个大小相似的子集（每份子集尽可能保持数据分布的一致性：子集中不同类别的样本数量比例与 D 基本一致），其中一份作为测试集，剩下 k-1 份为训练集 T，操作 k 次。 例如 D 划分为 D1，D2，… ，D10，第一次使用 D1 作为训练集，第二次使用 D2，第三次使用 D3， … ， 第十次使用 D10 作为测试集。最后计算 k 次测试误差的平均值近似泛化误差。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">y = data[<span class="string">'Survived'</span>]</span><br><span class="line">X = data.drop([<span class="string">'Survived'</span>], axis=<span class="number">1</span>).values</span><br><span class="line"></span><br><span class="line">classifiers = [AdaBoostClassifier(</span><br><span class="line">    random_state=<span class="number">2</span>), RandomForestClassifier(random_state=<span class="number">2</span>)]</span><br><span class="line"><span class="keyword">for</span> clf <span class="keyword">in</span> classifiers:</span><br><span class="line">    score = cross_val_score(clf, X, y, cv=<span class="number">10</span>, scoring=<span class="string">'accuracy'</span>)<span class="comment">#cv=10：10 折交叉验证法，scoring='accuracy'：返回测试精度</span></span><br><span class="line">    print([np.mean(score)])<span class="comment">#显示测试精度平均值</span></span><br></pre></td></tr></table></figure>
+<p><img src="http://p35v64prn.bkt.clouddn.com/2018-1-251.png" alt="git"></p>
+<p>我们可以发现随机森林分类器的准确率要高不少。</p>
+<h4 id="模型训练"><a href="#模型训练" class="headerlink" title="模型训练"></a>模型训练</h4><p>但是随机森林是基于决策树的，决策树一直存在着过拟合的问题。</p>
+<p>过拟合是学习器性能过好，把样本的一些特性当做了数据的一般性质，从而导致训练误差低但泛化误差高。学习曲线是判断过拟合的一种方式，同时可以判断学习器的表现。学习曲线包括训练误差（或精度）随样例数目的变化曲线与测试误差（或精度）随样例数目的变化曲线。</p>
+<p>接下来通过绘制学习曲线，我们发现训练误差始终接近 0，而测试误差始终偏高，说明存在过拟合的问题。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> learning_curve</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">plot_learning_curve</span><span class="params">(estimator, title, X, y, cv=<span class="number">10</span>,</span></span></span><br><span class="line"><span class="function"><span class="params">                        train_sizes=np.linspace<span class="params">(<span class="number">.1</span>, <span class="number">1.0</span>, <span class="number">5</span>)</span>)</span>:</span><span class="comment">#定义函数 plot_learning_curve 绘制学习曲线。train_sizes 初始化为 array([ 0.1  ,  0.325,  0.55 ,  0.775,  1.   ]),cv 初始化为 10，以后调用函数时不再输入这两个变量</span></span><br><span class="line">    plt.figure()</span><br><span class="line">    plt.title(title)<span class="comment">#设置图的 title</span></span><br><span class="line">    plt.xlabel(<span class="string">'Training examples'</span>)<span class="comment">#横坐标</span></span><br><span class="line">    plt.ylabel(<span class="string">'Score'</span>)<span class="comment">#纵坐标</span></span><br><span class="line">    train_sizes, train_scores, test_scores = learning_curve(estimator, X, y, cv=cv,</span><br><span class="line">                                                            train_sizes=train_sizes)<span class="comment">#使用 10 折交叉验证法，对 train_sizes*m（m为总的样例数目） 个的数据进行训练，返回训练精度 train_scores,测试精度 test_scores </span></span><br><span class="line">    train_scores_mean = np.mean(train_scores, axis=<span class="number">1</span>)<span class="comment">#计算平均值</span></span><br><span class="line">    train_scores_std = np.std(train_scores, axis=<span class="number">1</span>)<span class="comment">#计算标准差</span></span><br><span class="line">    test_scores_mean = np.mean(test_scores, axis=<span class="number">1</span>)</span><br><span class="line">    test_scores_std = np.std(test_scores, axis=<span class="number">1</span>)</span><br><span class="line">    plt.grid()<span class="comment">#设置背景的网格</span></span><br><span class="line"></span><br><span class="line">    plt.fill_between(train_sizes, train_scores_mean - train_scores_std,</span><br><span class="line">                     train_scores_mean + train_scores_std,</span><br><span class="line">                     alpha=<span class="number">0.1</span>, color=<span class="string">'g'</span>)<span class="comment">#设置颜色</span></span><br><span class="line">    plt.fill_between(train_sizes, test_scores_mean - test_scores_std,</span><br><span class="line">                     test_scores_mean + test_scores_std,</span><br><span class="line">                     alpha=<span class="number">0.1</span>, color=<span class="string">'r'</span>)</span><br><span class="line">    plt.plot(train_sizes, train_scores_mean, <span class="string">'o-'</span>, color=<span class="string">'g'</span>,</span><br><span class="line">             label=<span class="string">'traning score'</span>)<span class="comment">#绘制训练精度曲线</span></span><br><span class="line">    plt.plot(train_sizes, test_scores_mean, <span class="string">'o-'</span>, color=<span class="string">'r'</span>,</span><br><span class="line">             label=<span class="string">'testing score'</span>)<span class="comment">#绘制测试精度曲线</span></span><br><span class="line">    plt.legend(loc=<span class="string">'best'</span>)</span><br><span class="line">    <span class="keyword">return</span> plt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">g = plot_learning_curve(RandomForestClassifier(), <span class="string">'RFC'</span>, X, y)<span class="comment">#调用函数 plot_learning_curve 绘制随机森林学习器学习曲线</span></span><br></pre></td></tr></table></figure>
+<p><img src="http://p35v64prn.bkt.clouddn.com/2018-1-25.png" alt="git"></p>
+<p>要解决这一问题只能通过调参。</p>
+<p>skitlearn中的randomforestclassifer函数具有非常多的参数，列举几个如下。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th></th>
+<th>特点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n_estimators</td>
+<td>基学习器数目（默认值10）</td>
+<td>基本趋势是值越大精度越高 ，直到达到一个上限</td>
+</tr>
+<tr>
+<td>criterion</td>
+<td>选择算法 gini 或者 entropy (默认 gini)</td>
+<td>视具体情况定</td>
+</tr>
+<tr>
+<td>max_features</td>
+<td>2.2.3节中子集的大小，即k值（默认 sqrt(n_features)）</td>
+<td></td>
+</tr>
+<tr>
+<td>max_depth</td>
+<td>决策树深度</td>
+<td>过小基学习器欠拟合，过大基学习器过拟合。粗调节</td>
+</tr>
+<tr>
+<td>max_leaf_nodes</td>
+<td>最大叶节点数（默认无限制）</td>
+<td>粗调节</td>
+</tr>
+<tr>
+<td>min_samples_split</td>
+<td>分裂时最小样本数，默认2</td>
+<td>细调节,越小模型越复杂</td>
+</tr>
+<tr>
+<td>min_samples_leaf</td>
+<td>叶节点最小样本数，默认2</td>
+<td>细调节，越小模型越复杂</td>
+</tr>
+<tr>
+<td>bootstrap</td>
+<td>是否采用自助法进行样本抽样（默认使用）</td>
+<td>决定基学习器样本是否一致</td>
+</tr>
+</tbody>
+</table>
+<p>我们先通过尝试找到最好的n_estimators和max_depth，max_leaf_nodes  参数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">para_tune</span><span class="params">(para, X, y)</span>:</span> <span class="comment">#</span></span><br><span class="line">    clf = RandomForestClassifier(n_estimators=para) <span class="comment">#n_estimators 设置为 para</span></span><br><span class="line">    score = np.mean(cross_val_score(clf, X, y, scoring=<span class="string">'accuracy'</span>))</span><br><span class="line">    <span class="keyword">return</span> score</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">accurate_curve</span><span class="params">(para_range, X, y, title)</span>:</span></span><br><span class="line">    score = []</span><br><span class="line">    <span class="keyword">for</span> para <span class="keyword">in</span> para_range:</span><br><span class="line">        score.append(para_tune(para, X, y))</span><br><span class="line">    plt.figure()</span><br><span class="line">    plt.title(title)</span><br><span class="line">    plt.xlabel(<span class="string">'Paramters'</span>)</span><br><span class="line">    plt.ylabel(<span class="string">'Score'</span>)</span><br><span class="line">    plt.grid()</span><br><span class="line">    plt.plot(para_range, score, <span class="string">'o-'</span>)</span><br><span class="line">    <span class="keyword">return</span> plt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">g = accurate_curve([<span class="number">2</span>, <span class="number">10</span>, <span class="number">50</span>, <span class="number">100</span>, <span class="number">150</span>], X, y, <span class="string">'n_estimator tuning'</span>)</span><br></pre></td></tr></table></figure>
+<p>与上面代码类似的我们可以得到下面三张图</p>
+<p><img src="http://p35v64prn.bkt.clouddn.com/2018-1-253.png" alt="git"></p>
+<p><img src="http://p35v64prn.bkt.clouddn.com/2018-1-254.png" alt="git"></p>
+<p><img src="http://p35v64prn.bkt.clouddn.com/2018-1-255.png" alt="git"></p>
+<p>接着我们就可以固定这三个影响较大的参数，再利用自动调参函数GridSearchCV来对其他的参数进行粗略的调节。<img src="http://p35v64prn.bkt.clouddn.com/2018-1-257.png" alt="git"></p>
+<p>如此我们得到了最终0.8204的准确率。</p>
+
       
     </div>
     
@@ -438,7 +585,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yyhyplxyz.github.io/2018/01/23/文章标题/" title="文章标题">http://yyhyplxyz.github.io/2018/01/23/文章标题/</a>
+    <a href="http://yyhyplxyz.github.io/2018/01/26/利用随机森林法预测Titanic乘客生存率/" title="利用随机森林法预测Titanic乘客生存率">http://yyhyplxyz.github.io/2018/01/26/利用随机森林法预测Titanic乘客生存率/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -460,8 +607,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/23/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/01/25/python作图-1/" rel="next" title="python作图">
+                <i class="fa fa-chevron-left"></i> python作图
               </a>
             
           </div>
@@ -469,10 +616,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/24/我的博客创建历程/" rel="prev" title="Hexo + Github Pages博客创建历程">
-                Hexo + Github Pages博客创建历程 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -701,7 +844,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一个文章"><span class="nav-number">1.</span> <span class="nav-text">第一个文章</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题描述"><span class="nav-number">1.</span> <span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决流程"><span class="nav-number">2.</span> <span class="nav-text">解决流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据清洗"><span class="nav-number">2.1.</span> <span class="nav-text">数据清洗</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#删除无必要数据"><span class="nav-number">2.1.1.</span> <span class="nav-text">删除无必要数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#空数据处理"><span class="nav-number">2.1.2.</span> <span class="nav-text">空数据处理</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Age"><span class="nav-number">2.1.2.0.1.</span> <span class="nav-text">Age</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Embarked"><span class="nav-number">2.1.2.1.</span> <span class="nav-text">Embarked</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Cabin"><span class="nav-number">2.1.2.2.</span> <span class="nav-text">Cabin</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数值化和标准化"><span class="nav-number">2.1.3.</span> <span class="nav-text">数值化和标准化</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#数值化"><span class="nav-number">2.1.3.1.</span> <span class="nav-text">数值化</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#标准化"><span class="nav-number">2.1.3.2.</span> <span class="nav-text">标准化</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#偏态分布"><span class="nav-number">2.1.3.2.1.</span> <span class="nav-text">偏态分布</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#离群点删除"><span class="nav-number">2.1.3.2.2.</span> <span class="nav-text">离群点删除</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模型选择与训练"><span class="nav-number">2.2.</span> <span class="nav-text">模型选择与训练</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#模型介绍"><span class="nav-number">2.2.1.</span> <span class="nav-text">模型介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Boosting模型与bagging模型"><span class="nav-number">2.2.1.0.1.</span> <span class="nav-text">Boosting模型与bagging模型</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#Adaboost与RandomForest算法"><span class="nav-number">2.2.1.0.2.</span> <span class="nav-text">Adaboost与RandomForest算法</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模型评估"><span class="nav-number">2.2.2.</span> <span class="nav-text">模型评估</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模型训练"><span class="nav-number">2.2.3.</span> <span class="nav-text">模型训练</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
