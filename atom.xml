@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yyhyplxyz.github.io/"/>
-  <updated>2018-01-28T07:24:07.000Z</updated>
+  <updated>2018-01-28T07:56:24.000Z</updated>
   <id>http://yyhyplxyz.github.io/</id>
   
   <author>
@@ -17,13 +17,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>semantic 学习</title>
+    <link href="http://yyhyplxyz.github.io/2018/01/28/semantic-%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://yyhyplxyz.github.io/2018/01/28/semantic-学习/</id>
+    <published>2018-01-28T07:25:02.000Z</published>
+    <updated>2018-01-28T07:56:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>分为简单安装和完全安装。简单安装只要下载了对应的css和js文件即可，我们在写前端时，引用对应的文件即可。</p><p>完全安装较麻烦一些，但可以支持更换主题，定制各按钮，表格样式等操作。</p><h3 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h3&gt;&lt;h3 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h3&gt;&lt;p&gt;分为简
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>html5学习</title>
     <link href="http://yyhyplxyz.github.io/2018/01/28/html5%E5%AD%A6%E4%B9%A0/"/>
     <id>http://yyhyplxyz.github.io/2018/01/28/html5学习/</id>
     <published>2018-01-28T06:35:17.000Z</published>
-    <updated>2018-01-28T07:24:07.000Z</updated>
+    <updated>2018-01-28T07:54:40.000Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="导论"><a href="#导论" class="headerlink" title="导论"></a>导论</h3><p>Html5 = html+css+javascript+api</p><p>2014年html5定稿，新增了离线存储，丰富表单，js线程，多媒体引擎，不止用来开发网页，还可以开发app，（快速迭代，降低成本）</p><p>native app-》web app-》native app</p><p>浏览器需要兼容html5。</p><h3 id="标签的变化"><a href="#标签的变化" class="headerlink" title="标签的变化"></a>标签的变化</h3><p>doctype指示浏览器使用哪个标准来渲染页面。</p><p>dtd是标记语言的一种规则。</p><p><img src="http://p35v64prn.bkt.clouddn.com/2018-1-281.png" alt="git"></p><p>‘<div> <span> <a>‘就是在dtd，使用xml来指定功能的</a></span></div></p><h5 id="结构标签"><a href="#结构标签" class="headerlink" title="结构标签"></a>结构标签</h5><p>块状元素，有意义的div标签。</p><p><article>定义文章</article></p><p><nav>定义导航链接</nav></p><p><header>定义页面或区域头部</header></p><p>《section》标记定义区域</p><p>《aside》标记侧边栏</p><p>《hgroup》标记文件中一个区块的信息，用hgroup规整多个h1等标题</p><p>《figure》定义媒体内容及标题</p><p>《figurecaption》给figure元素标题</p><p>《footer》定义页面或区域底部</p><p>《dialog》可以标记对话框</p><h5 id="多媒体标签"><a href="#多媒体标签" class="headerlink" title="多媒体标签"></a>多媒体标签</h5><p>可以添加文字，当不支持时显示对应文字</p><p>《video》有height与length</p><p>《audio》</p><p>《source》可用于多种格式转码</p><p>《canvas》标记图片</p><p>《embed》外部可交互的内容，插件</p><h3 id="页面布局"><a href="#页面布局" class="headerlink" title="页面布局"></a>页面布局</h3><h3 id="属性变化"><a href="#属性变化" class="headerlink" title="属性变化"></a>属性变化</h3><h3 id="HTML5展望"><a href="#HTML5展望" class="headerlink" title="HTML5展望"></a>HTML5展望</h3>]]></content>
+    <content type="html"><![CDATA[<h3 id="导论"><a href="#导论" class="headerlink" title="导论"></a>导论</h3><p>Html5 = html+css+javascript+api</p><p>2014年html5定稿，新增了离线存储，丰富表单，js线程，多媒体引擎，不止用来开发网页，还可以开发app，（快速迭代，降低成本）</p><p>native app-》web app-》native app</p><p>浏览器需要兼容html5。</p><h3 id="标签的变化"><a href="#标签的变化" class="headerlink" title="标签的变化"></a>标签的变化</h3><p>doctype指示浏览器使用哪个标准来渲染页面。</p><p>dtd是标记语言的一种规则。</p><p><img src="http://p35v64prn.bkt.clouddn.com/2018-1-281.png" alt="git"></p><p>‘<div> <span> <a>‘就是在dtd，使用xml来指定功能的</a></span></div></p><h5 id="结构标签"><a href="#结构标签" class="headerlink" title="结构标签"></a>结构标签</h5><p>块状元素，有意义的div标签。</p><p><article>定义文章</article></p><p><nav>定义导航链接</nav></p><p><header>定义页面或区域头部</header></p><p>《section》标记定义区域</p><p>《aside》标记侧边栏</p><p>《hgroup》标记文件中一个区块的信息，用hgroup规整多个h1等标题</p><p>《figure》定义媒体内容及标题</p><p>《figurecaption》给figure元素标题</p><p>《footer》定义页面或区域底部</p><p>《dialog》可以标记对话框</p><h5 id="多媒体标签"><a href="#多媒体标签" class="headerlink" title="多媒体标签"></a>多媒体标签</h5><p>可以添加文字，当不支持时显示对应文字</p><p>《video》有height与length</p><p>《audio》</p><p>《source》可用于多种格式转码</p><p>《canvas》标记图片</p><p>《embed》外部可交互的内容，插件</p><p>富媒体的发展，不需要插件即可操作媒体文件，极大地提升了使用体验</p><h5 id="web应用标签"><a href="#web应用标签" class="headerlink" title="web应用标签"></a>web应用标签</h5><p>《meter》状态标签，value的值不能超过max或者低于min的值，否则将会向上或向下取整 chrome opera</p><p>《progress》进度的标签 chrome Firefox opera</p><p>《datalist》定义下拉标签，非常方便，可以少写很多js代码，对用户来说操作更方便，firefox，chrome，opera</p><p>《dtails》左边有个三角符号</p><p>《menu》目前所有主流浏览器都不支持，可以实现软件的菜单下拉列表的功能</p><p><img src="http://p35v64prn.bkt.clouddn.com/2018-1-283.png" alt="git"></p><p>《menuitem》火狐8.0以上支持</p><p>《command》定义命令按钮，只有ie9支持</p><h5 id="其他标签"><a href="#其他标签" class="headerlink" title="其他标签"></a>其他标签</h5><p>《ruby》标记定义拼音，音标，注释</p><p>《rt》配合使用显示拼音</p><p>《mark》</p><h3 id="页面布局"><a href="#页面布局" class="headerlink" title="页面布局"></a>页面布局</h3><h3 id="属性变化"><a href="#属性变化" class="headerlink" title="属性变化"></a>属性变化</h3><h3 id="HTML5展望"><a href="#HTML5展望" class="headerlink" title="HTML5展望"></a>HTML5展望</h3>]]></content>
     
     <summary type="html">
     

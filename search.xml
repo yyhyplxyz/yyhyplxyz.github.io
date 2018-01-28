@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[semantic 学习]]></title>
+    <url>%2F2018%2F01%2F28%2Fsemantic-%E5%AD%A6%E4%B9%A0%2F</url>
+    <content type="text"><![CDATA[介绍安装分为简单安装和完全安装。简单安装只要下载了对应的css和js文件即可，我们在写前端时，引用对应的文件即可。 完全安装较麻烦一些，但可以支持更换主题，定制各按钮，表格样式等操作。 更换主题]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[html5学习]]></title>
     <url>%2F2018%2F01%2F28%2Fhtml5%E5%AD%A6%E4%B9%A0%2F</url>
-    <content type="text"><![CDATA[导论Html5 = html+css+javascript+api 2014年html5定稿，新增了离线存储，丰富表单，js线程，多媒体引擎，不止用来开发网页，还可以开发app，（快速迭代，降低成本） native app-》web app-》native app 浏览器需要兼容html5。 标签的变化doctype指示浏览器使用哪个标准来渲染页面。 dtd是标记语言的一种规则。 ‘ ‘就是在dtd，使用xml来指定功能的 结构标签块状元素，有意义的div标签。 定义文章 定义导航链接 定义页面或区域头部 《section》标记定义区域 《aside》标记侧边栏 《hgroup》标记文件中一个区块的信息，用hgroup规整多个h1等标题 《figure》定义媒体内容及标题 《figurecaption》给figure元素标题 《footer》定义页面或区域底部 《dialog》可以标记对话框 多媒体标签可以添加文字，当不支持时显示对应文字 《video》有height与length 《audio》 《source》可用于多种格式转码 《canvas》标记图片 《embed》外部可交互的内容，插件 页面布局属性变化HTML5展望]]></content>
+    <content type="text"><![CDATA[导论Html5 = html+css+javascript+api 2014年html5定稿，新增了离线存储，丰富表单，js线程，多媒体引擎，不止用来开发网页，还可以开发app，（快速迭代，降低成本） native app-》web app-》native app 浏览器需要兼容html5。 标签的变化doctype指示浏览器使用哪个标准来渲染页面。 dtd是标记语言的一种规则。 ‘ ‘就是在dtd，使用xml来指定功能的 结构标签块状元素，有意义的div标签。 定义文章 定义导航链接 定义页面或区域头部 《section》标记定义区域 《aside》标记侧边栏 《hgroup》标记文件中一个区块的信息，用hgroup规整多个h1等标题 《figure》定义媒体内容及标题 《figurecaption》给figure元素标题 《footer》定义页面或区域底部 《dialog》可以标记对话框 多媒体标签可以添加文字，当不支持时显示对应文字 《video》有height与length 《audio》 《source》可用于多种格式转码 《canvas》标记图片 《embed》外部可交互的内容，插件 富媒体的发展，不需要插件即可操作媒体文件，极大地提升了使用体验 web应用标签《meter》状态标签，value的值不能超过max或者低于min的值，否则将会向上或向下取整 chrome opera 《progress》进度的标签 chrome Firefox opera 《datalist》定义下拉标签，非常方便，可以少写很多js代码，对用户来说操作更方便，firefox，chrome，opera 《dtails》左边有个三角符号 《menu》目前所有主流浏览器都不支持，可以实现软件的菜单下拉列表的功能 《menuitem》火狐8.0以上支持 《command》定义命令按钮，只有ie9支持 其他标签《ruby》标记定义拼音，音标，注释 《rt》配合使用显示拼音 《mark》 页面布局属性变化HTML5展望]]></content>
   </entry>
   <entry>
     <title><![CDATA[经济机器是如何运转的]]></title>
