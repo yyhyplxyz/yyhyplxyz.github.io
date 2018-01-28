@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[semantic 学习]]></title>
     <url>%2F2018%2F01%2F28%2Fsemantic-%E5%AD%A6%E4%B9%A0%2F</url>
-    <content type="text"><![CDATA[介绍安装分为简单安装和完全安装。简单安装只要下载了对应的css和js文件即可，我们在写前端时，引用对应的文件即可。 完全安装较麻烦一些，但可以支持更换主题，定制各按钮，表格样式等操作。 更换主题]]></content>
+    <content type="text"><![CDATA[介绍安装与简单使用安装教程在官网。 分为简单安装和完全安装。简单安装只要下载了对应的css和js文件即可，我们在写前端时，引用对应的文件即可。 完全安装较麻烦一些，但可以支持更换主题，定制各按钮，表格样式等操作。 注意，如果只是简单安装的话，官网上给出的include in your html需要注意更改文件目录 我们可以在官方文档中找到多个样式的代码，看哪个自己喜欢的就复制粘贴一下，如下面的代码自己就能在网页中显示图中的效果。 1234567&lt;link rel="stylesheet" type="text/css" href="/Users/yangyuanhao/semantic/dist/semantic.min.css"&gt;&lt;script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"&gt;&lt;/script&gt;&lt;script src="semantic/dist/semantic.min.js"&gt;&lt;/script&gt;&lt;button class="ui button"&gt;Follow&lt;/button&gt; 更换主题]]></content>
   </entry>
   <entry>
     <title><![CDATA[html5学习]]></title>
