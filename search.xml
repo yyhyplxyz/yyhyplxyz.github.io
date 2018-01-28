@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[html5学习]]></title>
+    <url>%2F2018%2F01%2F28%2Fhtml5%E5%AD%A6%E4%B9%A0%2F</url>
+    <content type="text"><![CDATA[导论Html5 = html+css+javascript+api 2014年html5定稿，新增了离线存储，丰富表单，js线程，多媒体引擎，不止用来开发网页，还可以开发app，（快速迭代，降低成本） native app-》web app-》native app 浏览器需要兼容html5。 标签的变化doctype指示浏览器使用哪个标准来渲染页面。 dtd是标记语言的一种规则。 ‘ ‘就是在dtd，使用xml来指定功能的 结构标签块状元素，有意义的div标签。 定义文章 定义导航链接 定义页面或区域头部 《section》标记定义区域 《aside》标记侧边栏 《hgroup》标记文件中一个区块的信息，用hgroup规整多个h1等标题 《figure》定义媒体内容及标题 《figurecaption》给figure元素标题 《footer》定义页面或区域底部 《dialog》可以标记对话框 多媒体标签可以添加文字，当不支持时显示对应文字 《video》有height与length 《audio》 《source》可用于多种格式转码 《canvas》标记图片 《embed》外部可交互的内容，插件 页面布局属性变化HTML5展望]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[经济机器是如何运转的]]></title>
     <url>%2F2018%2F01%2F27%2F%E7%BB%8F%E6%B5%8E%E6%9C%BA%E5%99%A8%E6%98%AF%E5%A6%82%E4%BD%95%E8%BF%90%E8%BD%AC%E7%9A%84%2F</url>
     <content type="text"></content>

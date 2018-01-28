@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yyhyplxyz.github.io/"/>
-  <updated>2018-01-26T16:38:39.000Z</updated>
+  <updated>2018-01-28T07:24:07.000Z</updated>
   <id>http://yyhyplxyz.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>html5学习</title>
+    <link href="http://yyhyplxyz.github.io/2018/01/28/html5%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://yyhyplxyz.github.io/2018/01/28/html5学习/</id>
+    <published>2018-01-28T06:35:17.000Z</published>
+    <updated>2018-01-28T07:24:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="导论"><a href="#导论" class="headerlink" title="导论"></a>导论</h3><p>Html5 = html+css+javascript+api</p><p>2014年html5定稿，新增了离线存储，丰富表单，js线程，多媒体引擎，不止用来开发网页，还可以开发app，（快速迭代，降低成本）</p><p>native app-》web app-》native app</p><p>浏览器需要兼容html5。</p><h3 id="标签的变化"><a href="#标签的变化" class="headerlink" title="标签的变化"></a>标签的变化</h3><p>doctype指示浏览器使用哪个标准来渲染页面。</p><p>dtd是标记语言的一种规则。</p><p><img src="http://p35v64prn.bkt.clouddn.com/2018-1-281.png" alt="git"></p><p>‘<div> <span> <a>‘就是在dtd，使用xml来指定功能的</a></span></div></p><h5 id="结构标签"><a href="#结构标签" class="headerlink" title="结构标签"></a>结构标签</h5><p>块状元素，有意义的div标签。</p><p><article>定义文章</article></p><p><nav>定义导航链接</nav></p><p><header>定义页面或区域头部</header></p><p>《section》标记定义区域</p><p>《aside》标记侧边栏</p><p>《hgroup》标记文件中一个区块的信息，用hgroup规整多个h1等标题</p><p>《figure》定义媒体内容及标题</p><p>《figurecaption》给figure元素标题</p><p>《footer》定义页面或区域底部</p><p>《dialog》可以标记对话框</p><h5 id="多媒体标签"><a href="#多媒体标签" class="headerlink" title="多媒体标签"></a>多媒体标签</h5><p>可以添加文字，当不支持时显示对应文字</p><p>《video》有height与length</p><p>《audio》</p><p>《source》可用于多种格式转码</p><p>《canvas》标记图片</p><p>《embed》外部可交互的内容，插件</p><h3 id="页面布局"><a href="#页面布局" class="headerlink" title="页面布局"></a>页面布局</h3><h3 id="属性变化"><a href="#属性变化" class="headerlink" title="属性变化"></a>属性变化</h3><h3 id="HTML5展望"><a href="#HTML5展望" class="headerlink" title="HTML5展望"></a>HTML5展望</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;导论&quot;&gt;&lt;a href=&quot;#导论&quot; class=&quot;headerlink&quot; title=&quot;导论&quot;&gt;&lt;/a&gt;导论&lt;/h3&gt;&lt;p&gt;Html5 = html+css+javascript+api&lt;/p&gt;
+&lt;p&gt;2014年html5定稿，新增了离线存储，丰富表单，js线程，
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>经济机器是如何运转的</title>
