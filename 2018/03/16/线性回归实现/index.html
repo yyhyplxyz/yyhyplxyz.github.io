@@ -111,20 +111,21 @@
 
 
 
-<meta name="description" content="导论Html5 = html+css+javascript+api 2014年html5定稿，新增了离线存储，丰富表单，js线程，多媒体引擎，不止用来开发网页，还可以开发app，（快速迭代，降低成本） native app-》web app-》native app 浏览器需要兼容html5。 标签的变化doctype指示浏览器使用哪个标准来渲染页面。 dtd是标记语言的一种规则。  ‘  ‘就是在">
+<meta name="description" content="一元回归基本实现与向量化线性回归本质上是处理最优化的问题，即找到a和b，使得$\sum(y{i} - ax{i} - b)^2$  的值                                      尽可能小。 公式推导如下图  接着让我们来实现一元线性回归的方法吧 123456789101112131415161718192021222324252627282930313233343">
 <meta property="og:type" content="article">
-<meta property="og:title" content="html5学习">
-<meta property="og:url" content="http://yyhyplxyz.github.io/2018/01/28/html5学习/index.html">
+<meta property="og:title" content="线性回归实现">
+<meta property="og:url" content="http://yyhyplxyz.github.io/2018/03/16/线性回归实现/index.html">
 <meta property="og:site_name" content="元昊的博客">
-<meta property="og:description" content="导论Html5 = html+css+javascript+api 2014年html5定稿，新增了离线存储，丰富表单，js线程，多媒体引擎，不止用来开发网页，还可以开发app，（快速迭代，降低成本） native app-》web app-》native app 浏览器需要兼容html5。 标签的变化doctype指示浏览器使用哪个标准来渲染页面。 dtd是标记语言的一种规则。  ‘  ‘就是在">
+<meta property="og:description" content="一元回归基本实现与向量化线性回归本质上是处理最优化的问题，即找到a和b，使得$\sum(y{i} - ax{i} - b)^2$  的值                                      尽可能小。 公式推导如下图  接着让我们来实现一元线性回归的方法吧 123456789101112131415161718192021222324252627282930313233343">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/2018-1-281.png">
-<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/2018-1-283.png">
-<meta property="og:updated_time" content="2018-01-28T11:23:07.000Z">
+<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/2018-3-15.1.JPG">
+<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/2018-3-15.2.JPG">
+<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/2018-3-15.3.JPG">
+<meta property="og:updated_time" content="2018-03-16T15:54:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="html5学习">
-<meta name="twitter:description" content="导论Html5 = html+css+javascript+api 2014年html5定稿，新增了离线存储，丰富表单，js线程，多媒体引擎，不止用来开发网页，还可以开发app，（快速迭代，降低成本） native app-》web app-》native app 浏览器需要兼容html5。 标签的变化doctype指示浏览器使用哪个标准来渲染页面。 dtd是标记语言的一种规则。  ‘  ‘就是在">
-<meta name="twitter:image" content="http://p35v64prn.bkt.clouddn.com/2018-1-281.png">
+<meta name="twitter:title" content="线性回归实现">
+<meta name="twitter:description" content="一元回归基本实现与向量化线性回归本质上是处理最优化的问题，即找到a和b，使得$\sum(y{i} - ax{i} - b)^2$  的值                                      尽可能小。 公式推导如下图  接着让我们来实现一元线性回归的方法吧 123456789101112131415161718192021222324252627282930313233343">
+<meta name="twitter:image" content="http://p35v64prn.bkt.clouddn.com/2018-3-15.1.JPG">
 
 
 
@@ -154,13 +155,13 @@
 
 
 
-  <link rel="canonical" href="http://yyhyplxyz.github.io/2018/01/28/html5学习/"/>
+  <link rel="canonical" href="http://yyhyplxyz.github.io/2018/03/16/线性回归实现/"/>
 
 
 
 
 
-  <title>html5学习 | 元昊的博客</title>
+  <title>线性回归实现 | 元昊的博客</title>
   
 
 
@@ -311,7 +312,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yyhyplxyz.github.io/2018/01/28/html5学习/">
+    <link itemprop="mainEntityOfPage" href="http://yyhyplxyz.github.io/2018/03/16/线性回归实现/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jack Yang">
@@ -328,7 +329,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">html5学习</h1>
+          <h1 class="post-title" itemprop="name headline">线性回归实现</h1>
         
 
         <div class="post-meta">
@@ -340,8 +341,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-28T14:35:17+08:00">
-                2018-01-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-16T14:52:13+08:00">
+                2018-03-16
               </time>
             
 
@@ -358,7 +359,7 @@
 
           
           
-             <span id="/2018/01/28/html5学习/" class="leancloud_visitors" data-flag-title="html5学习">
+             <span id="/2018/03/16/线性回归实现/" class="leancloud_visitors" data-flag-title="线性回归实现">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -384,7 +385,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  795
+                  668
                 </span>
               
 
@@ -421,59 +422,20 @@
       
 
       
-        <h3 id="导论"><a href="#导论" class="headerlink" title="导论"></a>导论</h3><p>Html5 = html+css+javascript+api</p>
-<p>2014年html5定稿，新增了离线存储，丰富表单，js线程，多媒体引擎，不止用来开发网页，还可以开发app，（快速迭代，降低成本）</p>
-<p>native app-》web app-》native app</p>
-<p>浏览器需要兼容html5。</p>
-<h3 id="标签的变化"><a href="#标签的变化" class="headerlink" title="标签的变化"></a>标签的变化</h3><p>doctype指示浏览器使用哪个标准来渲染页面。</p>
-<p>dtd是标记语言的一种规则。</p>
-<p><img src="http://p35v64prn.bkt.clouddn.com/2018-1-281.png" alt="git"></p>
-<p>‘<div> <span> <a>‘就是在dtd，使用xml来指定功能的</a></span></div></p>
-<h5 id="结构标签"><a href="#结构标签" class="headerlink" title="结构标签"></a>结构标签</h5><p>块状元素，有意义的div标签。</p>
-<p><article>定义文章</article></p>
-<p><nav>定义导航链接</nav></p>
-<p><header>定义页面或区域头部</header></p>
-<p>《section》标记定义区域</p>
-<p>《aside》标记侧边栏</p>
-<p>《hgroup》标记文件中一个区块的信息，用hgroup规整多个h1等标题</p>
-<p>《figure》定义媒体内容及标题</p>
-<p>《figurecaption》给figure元素标题</p>
-<p>《footer》定义页面或区域底部</p>
-<p>《dialog》可以标记对话框</p>
-<h5 id="多媒体标签"><a href="#多媒体标签" class="headerlink" title="多媒体标签"></a>多媒体标签</h5><p>可以添加文字，当不支持时显示对应文字</p>
-<p>《video》有height与length</p>
-<p>《audio》</p>
-<p>《source》可用于多种格式转码</p>
-<p>《canvas》标记图片</p>
-<p>《embed》外部可交互的内容，插件</p>
-<p>富媒体的发展，不需要插件即可操作媒体文件，极大地提升了使用体验</p>
-<h5 id="web应用标签"><a href="#web应用标签" class="headerlink" title="web应用标签"></a>web应用标签</h5><p>《meter》状态标签，value的值不能超过max或者低于min的值，否则将会向上或向下取整 chrome opera</p>
-<p>《progress》进度的标签 chrome Firefox opera</p>
-<p>《datalist》定义下拉标签，非常方便，可以少写很多js代码，对用户来说操作更方便，firefox，chrome，opera</p>
-<p>《dtails》左边有个三角符号</p>
-<p>《menu》目前所有主流浏览器都不支持，可以实现软件的菜单下拉列表的功能</p>
-<p><img src="http://p35v64prn.bkt.clouddn.com/2018-1-283.png" alt="git"></p>
-<p>《menuitem》火狐8.0以上支持</p>
-<p>《command》定义命令按钮，只有ie9支持</p>
-<h5 id="其他标签"><a href="#其他标签" class="headerlink" title="其他标签"></a>其他标签</h5><p>《ruby》标记定义拼音，音标，注释</p>
-<p>《rt》标记定义对ruby的注释文本</p>
-<p>《rp》告诉不支持ruby的浏览器该如何显示，rp不要放在rt标签内</p>
-<p>《mark》黄色的选中，所有主流浏览器都可以</p>
-<p>《form》有内置js 可以用来做自动化的计算器</p>
-<h5 id="删除的标签"><a href="#删除的标签" class="headerlink" title="删除的标签"></a>删除的标签</h5><p>html5是向下兼容的。这些标签仍可以在html5中使用，网页显示不会出错，只是在标准中被删除了</p>
-<h6 id="纯表现的元素"><a href="#纯表现的元素" class="headerlink" title="纯表现的元素"></a>纯表现的元素</h6><p>big center font s strike等可以交给css属性的属性</p>
-<h6 id="有负面影响的元素"><a href="#有负面影响的元素" class="headerlink" title="有负面影响的元素"></a>有负面影响的元素</h6><p>frame frameset noframes</p>
-<p>以上三个标签会含括子网页，不利用搜索引擎搜索，也破坏了html中body的结构。</p>
-<h6 id="产生混淆的元素"><a href="#产生混淆的元素" class="headerlink" title="产生混淆的元素"></a>产生混淆的元素</h6><p>applet isindex acronym dir</p>
-<h5 id="重定义标签"><a href="#重定义标签" class="headerlink" title="重定义标签"></a>重定义标签</h5><p>《b》代表内联文本，变为粗体，不表示重要信息</p>
-<p>《i》代表内联文本，变为斜体，不表示重要信息</p>
-<p>《dd》可以同detail，figures使用，定义包含文本，类似描述文本内容</p>
-<p>《dt》可以同detail，figures使用，汇总细节，类似文本标题</p>
-<p>《hr》表示主题结束，显现水平线</p>
-<p>《small》表示小字体，打印注释或者法律条款</p>
-<p>《strong》表示重要性，而不是强调</p>
-<p>《hr》《b》《i》都是标准中的含义发生了变化，但是显示效果跟以前是一样的。</p>
-<h3 id="页面布局"><a href="#页面布局" class="headerlink" title="页面布局"></a>页面布局</h3><h3 id="属性变化"><a href="#属性变化" class="headerlink" title="属性变化"></a>属性变化</h3><h3 id="HTML5展望"><a href="#HTML5展望" class="headerlink" title="HTML5展望"></a>HTML5展望</h3>
+        <h2 id="一元回归基本实现与向量化"><a href="#一元回归基本实现与向量化" class="headerlink" title="一元回归基本实现与向量化"></a>一元回归基本实现与向量化</h2><p>线性回归本质上是处理最优化的问题，即找到a和b，使得$\sum(y<em>{i} - ax</em>{i} - b)^2$  的值                                      尽可能小。</p>
+<p>公式推导如下图</p>
+<p><img src="http://p35v64prn.bkt.clouddn.com/2018-3-15.1.JPG" alt="git"></p>
+<p>接着让我们来实现一元线性回归的方法吧</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LinearRegression</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.a = <span class="number">0</span></span><br><span class="line">        self.b = <span class="number">0</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fit</span><span class="params">(self, x_train,y_train)</span>:</span></span><br><span class="line">        <span class="keyword">assert</span> x_train.ndim == y_train.ndim == <span class="number">1</span>, <span class="string">"This is a single variable LinearRegression model"</span></span><br><span class="line">        <span class="keyword">assert</span> len(x_train) == len(y_train), <span class="string">"the size of x_train must equal to the size of y_train"</span></span><br><span class="line">        x_mean = np.mean(x_train)</span><br><span class="line">        y_mean = np.mean(y_train)</span><br><span class="line">        <span class="comment">#基本实现</span></span><br><span class="line">        <span class="string">'''</span></span><br><span class="line"><span class="string">        numerator = 0.0</span></span><br><span class="line"><span class="string">        denominator = 0.0</span></span><br><span class="line"><span class="string">        for x, y in zip(x_train, y_train):</span></span><br><span class="line"><span class="string">            numerator += (x*y-x*y_mean)</span></span><br><span class="line"><span class="string">            denominator += (x*x - x*x_mean)</span></span><br><span class="line"><span class="string">        self.a = numerator / denominator</span></span><br><span class="line"><span class="string">        self.b = y_mean - self.a * x_mean</span></span><br><span class="line"><span class="string">        '''</span></span><br><span class="line">        <span class="comment">#向量化实现</span></span><br><span class="line">        self.a = (x_train - x_mean).dot(y_train - y_mean) / (x_train - x_mean).dot(x_train - x_mean)</span><br><span class="line">        self.b = y_mean - self.a * x_mean</span><br><span class="line">        <span class="keyword">return</span> self</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">predict</span><span class="params">(self, topredict)</span>:</span></span><br><span class="line">        <span class="keyword">assert</span> topredict.ndim == <span class="number">1</span>, <span class="string">"This is a single variable LinearRegression model"</span></span><br><span class="line">        <span class="keyword">assert</span> self.a <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span> <span class="keyword">and</span> self.b <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span>, <span class="string">"Must fit before"</span></span><br><span class="line">        <span class="keyword">return</span> np.array([self._predict(i) <span class="keyword">for</span> i <span class="keyword">in</span> topredict])</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_predict</span><span class="params">(self, x)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.a * x + self.b</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">accuracy_score</span><span class="params">(self, y_true, y_predict)</span>:</span></span><br><span class="line">        <span class="keyword">assert</span> y_true.shape[<span class="number">0</span>] == y_predict.shape[<span class="number">0</span>], <span class="string">"the size of y_true must be equal to the size of y_predict"</span></span><br><span class="line">        <span class="keyword">return</span> sum(y_true == y_predict) / len(y_true)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">score</span><span class="params">(self, x_test, y_test)</span>:</span></span><br><span class="line">        y_predict = self.predict(x_test)</span><br><span class="line">        <span class="keyword">return</span> self.accuracy_score(y_test, y_predict)</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__repr__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">"My single variable simpleLinearRegression"</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">x = np.array([<span class="number">1.</span>, <span class="number">2.</span>, <span class="number">3.</span>, <span class="number">4.</span>, <span class="number">5.</span>])</span><br><span class="line">y = np.array([<span class="number">2.</span>, <span class="number">3.</span>, <span class="number">4.</span>, <span class="number">5.</span>, <span class="number">6.</span>])</span><br><span class="line">model = LinearRegression()</span><br><span class="line">model.fit(x,y)</span><br><span class="line">y_1 = model.predict(x)</span><br><span class="line">print(y_1)</span><br><span class="line"><span class="comment">#print(model.score(y_1, y))</span></span><br></pre></td></tr></table></figure>
+<p>事实上我在上图中推导的公式并非最简的，经过下图的推导可以进一步简化。</p>
+<p><img src="http://p35v64prn.bkt.clouddn.com/2018-3-15.2.JPG" alt="git"></p>
+<p>同时代码方面也可以优化成向量的形式，通过向量运算而非循环迭代可以极大地提高cpu计算效率，而且编译器／操作系统会自发地执行并行计算，加快计算速度。</p>
+<p>代码上面部分中就可以见到了。</p>
+<h2 id="多元线性回归"><a href="#多元线性回归" class="headerlink" title="多元线性回归"></a>多元线性回归</h2><p>多元线性回归最关键的是公式的推导，根据维基百科等现有资料，将推导过程呈现如下。</p>
+<p><img src="http://p35v64prn.bkt.clouddn.com/2018-3-15.3.JPG" alt="git"></p>
+<p>代码的实现是蛮容易的，也是像上文一样调用numpy的内置函数做向量化运算的处理。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LinearRegression</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.coefficient = <span class="keyword">None</span></span><br><span class="line">        self.intercept_ = <span class="keyword">None</span></span><br><span class="line">        self._theta = <span class="keyword">None</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fit_normal</span><span class="params">(self, X_train, y_train)</span>:</span></span><br><span class="line">        X_b = np.hstack([np.ones((len(X_train), <span class="number">1</span>)), X_train])</span><br><span class="line">        self._theta = np.linalg.inv(X_b.T.dot(X_b)).dot(X_b.T).dot(y_train)</span><br><span class="line">        self.intercept_ = self._theta[<span class="number">0</span>]</span><br><span class="line">        self.coefficient = self._theta[<span class="number">1</span>:]</span><br><span class="line">        <span class="keyword">return</span> self</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">predict</span><span class="params">(self, X_predict)</span>:</span></span><br><span class="line">        X_b = np.hstack([np.ones((len(X_predict), <span class="number">1</span>)), X_predict])</span><br><span class="line">        <span class="keyword">return</span> X_b.dot(self._theta)</span><br><span class="line">        </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__repr__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">"My Multivariable LinearRegression"</span></span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -493,7 +455,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yyhyplxyz.github.io/2018/01/28/html5学习/" title="html5学习">http://yyhyplxyz.github.io/2018/01/28/html5学习/</a>
+    <a href="http://yyhyplxyz.github.io/2018/03/16/线性回归实现/" title="线性回归实现">http://yyhyplxyz.github.io/2018/03/16/线性回归实现/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -515,8 +477,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/27/经济机器是如何运转的/" rel="next" title="经济机器是如何运转的">
-                <i class="fa fa-chevron-left"></i> 经济机器是如何运转的
+              <a href="/2018/03/14/sklearn中使用KNN的范例/" rel="next" title="sklearn中使用KNN的范例">
+                <i class="fa fa-chevron-left"></i> sklearn中使用KNN的范例
               </a>
             
           </div>
@@ -524,10 +486,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/28/semantic-学习/" rel="prev" title="semantic 学习">
-                semantic 学习 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -639,7 +597,7 @@ var jiathis_config={
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -756,7 +714,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#导论"><span class="nav-number">1.</span> <span class="nav-text">导论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标签的变化"><span class="nav-number">2.</span> <span class="nav-text">标签的变化</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#结构标签"><span class="nav-number">2.0.1.</span> <span class="nav-text">结构标签</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#多媒体标签"><span class="nav-number">2.0.2.</span> <span class="nav-text">多媒体标签</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#web应用标签"><span class="nav-number">2.0.3.</span> <span class="nav-text">web应用标签</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#其他标签"><span class="nav-number">2.0.4.</span> <span class="nav-text">其他标签</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#删除的标签"><span class="nav-number">2.0.5.</span> <span class="nav-text">删除的标签</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#纯表现的元素"><span class="nav-number">2.0.5.1.</span> <span class="nav-text">纯表现的元素</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#有负面影响的元素"><span class="nav-number">2.0.5.2.</span> <span class="nav-text">有负面影响的元素</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#产生混淆的元素"><span class="nav-number">2.0.5.3.</span> <span class="nav-text">产生混淆的元素</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#重定义标签"><span class="nav-number">2.0.6.</span> <span class="nav-text">重定义标签</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#页面布局"><span class="nav-number">3.</span> <span class="nav-text">页面布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性变化"><span class="nav-number">4.</span> <span class="nav-text">属性变化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML5展望"><span class="nav-number">5.</span> <span class="nav-text">HTML5展望</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一元回归基本实现与向量化"><span class="nav-number">1.</span> <span class="nav-text">一元回归基本实现与向量化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多元线性回归"><span class="nav-number">2.</span> <span class="nav-text">多元线性回归</span></a></li></ol></div>
             
 
           </div>
@@ -790,11 +748,11 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">8.5k</span>
+    <span title="Site words total count">8.3k</span>
   
   <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">共8.5k字</span>
+  <span class="post-count">共8.3k字</span>
 </div>
 </div>
 
