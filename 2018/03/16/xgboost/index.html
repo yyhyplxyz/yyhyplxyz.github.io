@@ -119,7 +119,7 @@
 <meta property="og:description" content="安装过程中出现的问题按照brew install gcc@5 pip install xgboost的方式安装出错，经过查阅stackoverflow和仔细阅读报错说明，“command python setup.py egg_info failer with error 1” 可以认定pip安装时少安装了链接文件，感觉这是在做pip安装包的bug。MAC电脑多半会出现这个错误，于是将解决方案分享">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/2018-3-15.4.png">
-<meta property="og:updated_time" content="2018-03-16T16:06:03.000Z">
+<meta property="og:updated_time" content="2018-03-17T16:23:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="xgboost">
 <meta name="twitter:description" content="安装过程中出现的问题按照brew install gcc@5 pip install xgboost的方式安装出错，经过查阅stackoverflow和仔细阅读报错说明，“command python setup.py egg_info failer with error 1” 可以认定pip安装时少安装了链接文件，感觉这是在做pip安装包的bug。MAC电脑多半会出现这个错误，于是将解决方案分享">
@@ -383,7 +383,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  157
+                  699
                 </span>
               
 
@@ -399,7 +399,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1
+                  3
                 </span>
               
             </div>
@@ -422,13 +422,16 @@
       
         <h2 id="安装过程中出现的问题"><a href="#安装过程中出现的问题" class="headerlink" title="安装过程中出现的问题"></a>安装过程中出现的问题</h2><p>按照brew install gcc@5 pip install xgboost的方式安装出错，经过查阅stackoverflow和仔细阅读报错说明，“command python setup.py egg_info failer with error 1” 可以认定pip安装时少安装了链接文件，感觉这是在做pip安装包的bug。MAC电脑多半会出现这个错误，于是将解决方案分享给大家。</p>
 <p><img src="http://p35v64prn.bkt.clouddn.com/2018-3-15.4.png" alt="git"></p>
-<p>git clone –recursive <a href="https://github.com/dmlc/xgboost.git" target="_blank" rel="noopener">https://github.com/dmlc/xgboost.git</a></p>
-<p>cd xgboost</p>
-<p>./build.sh</p>
-<p>cd python-package</p>
-<p>python3 setup.py install</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">git clone --recursive https://github.com/dmlc/xgboost.git</span><br><span class="line"></span><br><span class="line">cd xgboost</span><br><span class="line"></span><br><span class="line">./build.sh</span><br><span class="line"></span><br><span class="line">cd python-package</span><br><span class="line"></span><br><span class="line">python3 setup.py install</span><br></pre></td></tr></table></figure>
 <p>运行以上命令即可，其实就是从github上下载源码然后来编译啦。</p>
-<h2 id="简单利用xgboost来提高分类性能"><a href="#简单利用xgboost来提高分类性能" class="headerlink" title="简单利用xgboost来提高分类性能"></a>简单利用xgboost来提高分类性能</h2>
+<h2 id="简单利用xgboost来提高分类性能"><a href="#简单利用xgboost来提高分类性能" class="headerlink" title="简单利用xgboost来提高分类性能"></a>简单利用xgboost来提高分类性能</h2><p>据说这是一个非常强大的库，可以直线提高原有模型的准确度。如果对它的原理和参数具体调优设置有兴趣的可以移步到这个<a href="http://blog.csdn.net/sb19931201/article/details/52557382" target="_blank" rel="noopener">博文</a>，在下才疏学浅，就讲讲自己的简单认识吧：</p>
+<p>xgboost的基本算法原型是决策树</p>
+<p>决策树模型的基础上进行对样本重抽样，然后多个树平均 就得到了 Tree bagging算法</p>
+<p>Tree bagging 算法基础上进行对特征的随机挑选就形成了随机森林算法</p>
+<p>随机森林中多个决策树进行加权平均就得到了Boosing算法</p>
+<p>Boosting算法一般会出现过拟合现象，于是加入了惩罚因子，树越深，因子越大，同时加入了并行计算的方法就形成了现有的 xgboosting算法了</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> xgboost <span class="keyword">import</span> XGBClassifier</span><br><span class="line">params=&#123;</span><br><span class="line"><span class="string">'booster'</span>:<span class="string">'gbtree'</span>,</span><br><span class="line"><span class="string">'objective'</span>: <span class="string">'multi:softmax'</span>, <span class="comment">#多分类的问题</span></span><br><span class="line"><span class="string">'num_class'</span>:<span class="number">10</span>, <span class="comment"># 类别数，与 multisoftmax 并用</span></span><br><span class="line"><span class="string">'gamma'</span>:<span class="number">0.1</span>,  <span class="comment"># 用于控制是否后剪枝的参数,越大越保守，一般0.1、0.2这样子。</span></span><br><span class="line"><span class="string">'max_depth'</span>:<span class="number">12</span>, <span class="comment"># 构建树的深度，越大越容易过拟合</span></span><br><span class="line"><span class="string">'lambda'</span>:<span class="number">2</span>,  <span class="comment"># 控制模型复杂度的权重值的L2正则化项参数，参数越大，模型越不容易过拟合。</span></span><br><span class="line"><span class="string">'subsample'</span>:<span class="number">0.7</span>, <span class="comment"># 随机采样训练样本</span></span><br><span class="line"><span class="string">'colsample_bytree'</span>:<span class="number">0.7</span>, <span class="comment"># 生成树时进行的列采样</span></span><br><span class="line"><span class="string">'min_child_weight'</span>:<span class="number">3</span>, </span><br><span class="line"><span class="comment"># 这个参数默认是 1，是每个叶子里面 h 的和至少是多少，对正负样本不均衡时的 0-1 分类而言</span></span><br><span class="line"><span class="comment">#，假设 h 在 0.01 附近，min_child_weight 为 1 意味着叶子节点中最少需要包含 100 个样本。</span></span><br><span class="line"><span class="comment">#这个参数非常影响结果，控制叶子节点中二阶导的和的最小值，该参数值越小，越容易 overfitting。 </span></span><br><span class="line"><span class="string">'silent'</span>:<span class="number">0</span> ,<span class="comment">#设置成1则没有运行信息输出，最好是设置为0.</span></span><br><span class="line"><span class="string">'eta'</span>: <span class="number">0.007</span>, <span class="comment"># 如同学习率</span></span><br><span class="line"><span class="string">'seed'</span>:<span class="number">1000</span>, <span class="comment">#随机种子</span></span><br><span class="line"><span class="string">'nthread'</span>:<span class="number">7</span>,<span class="comment"># cpu 线程数</span></span><br><span class="line"><span class="comment">#'eval_metric': 'auc'</span></span><br><span class="line">&#125;</span><br><span class="line">clf = XGBClassifier(params)</span><br><span class="line">Learn=CalibratedClassifierCV(clf, method=<span class="string">'isotonic'</span>, cv=<span class="number">2</span>)</span><br><span class="line">Learn.fit(X_train, y_train)</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -741,11 +744,11 @@ var jiathis_config={
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">9.2k</span>
+    <span title="Site words total count">9.8k</span>
   
   <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">共9.2k字</span>
+  <span class="post-count">共9.8k字</span>
 </div>
 </div>
 
