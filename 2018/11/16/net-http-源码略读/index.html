@@ -111,21 +111,17 @@
 
 
 
-<meta name="description" content="导论数据挖掘建模中一个非常常见的应用就是商品购买预测，本文将利用sklearn中的KNN算法来做这个案例，最终展现我们预测结果的二维等高线填充地图和实际结果的散点分布。 详解数据格式如下图  常规的做法是要将male和female转换为数值型变量，在本例中暂不做此操作。接着我们要将年龄和预计收入归一化。这是因为收入的数值远大于年龄的数值，考虑到KNN算法的特性，不如此的话将导致收入的影响极大，年龄">
+<meta name="description" content="net/http 源码略读基本架构​    网络发展，很多网络应用都是构建再 HTTP 服务基础之上。HTTP 协议从诞生到现在，发展从1.0，1.1到2.0也不断再进步。理解 HTTP 构建的网络应用只要关注两个端—客户端（clinet）和服务端（server），两个端的交互来自 clinet 的 request，以及server端的response。所谓的http服务器，主要在于如何接受 cl">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sklearn中使用KNN的范例">
-<meta property="og:url" content="http://yyhyplxyz.github.io/2018/03/14/sklearn中使用KNN的范例/index.html">
+<meta property="og:title" content="net&#x2F;http 源码略读">
+<meta property="og:url" content="http://yyhyplxyz.github.io/2018/11/16/net-http-源码略读/index.html">
 <meta property="og:site_name" content="元昊的博客">
-<meta property="og:description" content="导论数据挖掘建模中一个非常常见的应用就是商品购买预测，本文将利用sklearn中的KNN算法来做这个案例，最终展现我们预测结果的二维等高线填充地图和实际结果的散点分布。 详解数据格式如下图  常规的做法是要将male和female转换为数值型变量，在本例中暂不做此操作。接着我们要将年龄和预计收入归一化。这是因为收入的数值远大于年龄的数值，考虑到KNN算法的特性，不如此的话将导致收入的影响极大，年龄">
+<meta property="og:description" content="net/http 源码略读基本架构​    网络发展，很多网络应用都是构建再 HTTP 服务基础之上。HTTP 协议从诞生到现在，发展从1.0，1.1到2.0也不断再进步。理解 HTTP 构建的网络应用只要关注两个端—客户端（clinet）和服务端（server），两个端的交互来自 clinet 的 request，以及server端的response。所谓的http服务器，主要在于如何接受 cl">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/2018-3-14.1.png">
-<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/2018-3-14.2.png">
-<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/2018-3-14.3.png">
-<meta property="og:updated_time" content="2018-03-14T12:55:50.000Z">
+<meta property="og:updated_time" content="2018-11-16T04:11:53.448Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sklearn中使用KNN的范例">
-<meta name="twitter:description" content="导论数据挖掘建模中一个非常常见的应用就是商品购买预测，本文将利用sklearn中的KNN算法来做这个案例，最终展现我们预测结果的二维等高线填充地图和实际结果的散点分布。 详解数据格式如下图  常规的做法是要将male和female转换为数值型变量，在本例中暂不做此操作。接着我们要将年龄和预计收入归一化。这是因为收入的数值远大于年龄的数值，考虑到KNN算法的特性，不如此的话将导致收入的影响极大，年龄">
-<meta name="twitter:image" content="http://p35v64prn.bkt.clouddn.com/2018-3-14.1.png">
+<meta name="twitter:title" content="net&#x2F;http 源码略读">
+<meta name="twitter:description" content="net/http 源码略读基本架构​    网络发展，很多网络应用都是构建再 HTTP 服务基础之上。HTTP 协议从诞生到现在，发展从1.0，1.1到2.0也不断再进步。理解 HTTP 构建的网络应用只要关注两个端—客户端（clinet）和服务端（server），两个端的交互来自 clinet 的 request，以及server端的response。所谓的http服务器，主要在于如何接受 cl">
 
 
 
@@ -155,13 +151,13 @@
 
 
 
-  <link rel="canonical" href="http://yyhyplxyz.github.io/2018/03/14/sklearn中使用KNN的范例/"/>
+  <link rel="canonical" href="http://yyhyplxyz.github.io/2018/11/16/net-http-源码略读/"/>
 
 
 
 
 
-  <title>sklearn中使用KNN的范例 | 元昊的博客</title>
+  <title>net/http 源码略读 | 元昊的博客</title>
   
 
 
@@ -312,7 +308,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yyhyplxyz.github.io/2018/03/14/sklearn中使用KNN的范例/">
+    <link itemprop="mainEntityOfPage" href="http://yyhyplxyz.github.io/2018/11/16/net-http-源码略读/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jack Yang">
@@ -329,7 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">sklearn中使用KNN的范例</h1>
+          <h1 class="post-title" itemprop="name headline">net/http 源码略读</h1>
         
 
         <div class="post-meta">
@@ -341,8 +337,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-14T20:27:49+08:00">
-                2018-03-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-16T11:44:22+08:00">
+                2018-11-16
               </time>
             
 
@@ -359,7 +355,7 @@
 
           
           
-             <span id="/2018/03/14/sklearn中使用KNN的范例/" class="leancloud_visitors" data-flag-title="sklearn中使用KNN的范例">
+             <span id="/2018/11/16/net-http-源码略读/" class="leancloud_visitors" data-flag-title="net/http 源码略读">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -385,7 +381,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  836
+                  827
                 </span>
               
 
@@ -422,20 +418,24 @@
       
 
       
-        <h2 id="导论"><a href="#导论" class="headerlink" title="导论"></a>导论</h2><p>数据挖掘建模中一个非常常见的应用就是商品购买预测，本文将利用sklearn中的KNN算法来做这个案例，最终展现我们预测结果的二维等高线填充地图和实际结果的散点分布。</p>
-<h2 id="详解"><a href="#详解" class="headerlink" title="详解"></a>详解</h2><p>数据格式如下图</p>
-<p><img src="http://p35v64prn.bkt.clouddn.com/2018-3-14.1.png" alt="git"></p>
-<p>常规的做法是要将male和female转换为数值型变量，在本例中暂不做此操作。接着我们要将年龄和预计收入归一化。这是因为收入的数值远大于年龄的数值，考虑到KNN算法的特性，不如此的话将导致收入的影响极大，年龄影响极小。于是我们采用了均值方差归一化的方法。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> StandardScaler</span><br><span class="line">sc = StandardScaler()</span><br><span class="line">X_train = sc.fit_transform(X_train)</span><br><span class="line">X_test = sc.transform(X_test)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#绘制我们预测结果的二维等高线填充地图</span></span><br><span class="line">X_set, y_set = X_train, y_train</span><br><span class="line">X1, X2 = np.meshgrid(np.arange(start = X_set[:, <span class="number">0</span>].min() - <span class="number">1</span>, stop = X_set[:, <span class="number">0</span>].max() + <span class="number">1</span>, step = <span class="number">0.01</span>),</span><br><span class="line">                     np.arange(start = X_set[:, <span class="number">1</span>].min() - <span class="number">1</span>, stop = X_set[:, <span class="number">1</span>].max() + <span class="number">1</span>, step = <span class="number">0.01</span>))</span><br><span class="line">plt.contourf(X1, X2, classifier.predict(np.array([X1.ravel(), X2.ravel()]).T).reshape(X1.shape),</span><br><span class="line">             alpha = <span class="number">0.75</span>, cmap = ListedColormap((<span class="string">'red'</span>, <span class="string">'green'</span>)))<span class="comment">#根据我们的预测值0，1来确定不同点\区域的颜色是红或者绿</span></span><br><span class="line">plt.xlim(X1.min(), X1.max())</span><br><span class="line">plt.ylim(X2.min(), X2.max())</span><br></pre></td></tr></table></figure>
-<p>显示如下</p>
-<p><img src="http://p35v64prn.bkt.clouddn.com/2018-3-14.2.png" alt="git"></p>
-<p>最终我们将实际的结果以散点图的形式绘制出来，同样以红绿两色表示二分类问题。</p>
-<p>代码如下</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i, j <span class="keyword">in</span> enumerate(np.unique(y_set)):</span><br><span class="line">    plt.scatter(X_set[y_set == j, <span class="number">0</span>], X_set[y_set == j, <span class="number">1</span>],</span><br><span class="line">                c = ListedColormap((<span class="string">'red'</span>, <span class="string">'green'</span>))(i), label = j)</span><br><span class="line">            </span><br><span class="line">plt.title(<span class="string">'K-NN (Training set)'</span>)</span><br><span class="line">plt.xlabel(<span class="string">'Age'</span>)</span><br><span class="line">plt.ylabel(<span class="string">'Estimated Salary'</span>)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
-<p><img src="http://p35v64prn.bkt.clouddn.com/2018-3-14.3.png" alt="git"></p>
-<p>全部代码如下</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">dataset = pd.read_csv(<span class="string">'Social_Network_Ads.csv'</span>)</span><br><span class="line">X = dataset.iloc[:, [<span class="number">2</span>, <span class="number">3</span>]].values</span><br><span class="line">y = dataset.iloc[:, <span class="number">4</span>].values</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.cross_validation <span class="keyword">import</span> train_test_split</span><br><span class="line">X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = <span class="number">0.25</span>, random_state = <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> StandardScaler</span><br><span class="line">sc = StandardScaler()</span><br><span class="line">X_train = sc.fit_transform(X_train)</span><br><span class="line">X_test = sc.transform(X_test)</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.neighbors <span class="keyword">import</span> KNeighborsClassifier</span><br><span class="line">classifier = KNeighborsClassifier(n_neighbors = <span class="number">5</span>, metric = <span class="string">'minkowski'</span>, p = <span class="number">2</span>)</span><br><span class="line">classifier.fit(X_train, y_train)</span><br><span class="line"></span><br><span class="line">y_pred = classifier.predict(X_test)</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> confusion_matrix</span><br><span class="line">cm = confusion_matrix(y_test, y_pred)</span><br><span class="line"><span class="comment"># Visualising the Training set results</span></span><br><span class="line"><span class="keyword">from</span> matplotlib.colors <span class="keyword">import</span> ListedColormap</span><br><span class="line">X_set, y_set = X_train, y_train</span><br><span class="line">X1, X2 = np.meshgrid(np.arange(start = X_set[:, <span class="number">0</span>].min() - <span class="number">1</span>, stop = X_set[:, <span class="number">0</span>].max() + <span class="number">1</span>, step = <span class="number">0.01</span>),</span><br><span class="line">                     np.arange(start = X_set[:, <span class="number">1</span>].min() - <span class="number">1</span>, stop = X_set[:, <span class="number">1</span>].max() + <span class="number">1</span>, step = <span class="number">0.01</span>))</span><br><span class="line">plt.contourf(X1, X2, classifier.predict(np.array([X1.ravel(), X2.ravel()]).T).reshape(X1.shape),</span><br><span class="line">             alpha = <span class="number">0.75</span>, cmap = ListedColormap((<span class="string">'red'</span>, <span class="string">'green'</span>)))</span><br><span class="line">plt.xlim(X1.min(), X1.max())</span><br><span class="line">plt.ylim(X2.min(), X2.max())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i, j <span class="keyword">in</span> enumerate(np.unique(y_set)):</span><br><span class="line">    plt.scatter(X_set[y_set == j, <span class="number">0</span>], X_set[y_set == j, <span class="number">1</span>],</span><br><span class="line">                c = ListedColormap((<span class="string">'red'</span>, <span class="string">'green'</span>))(i), label = j)</span><br><span class="line">            </span><br><span class="line">plt.title(<span class="string">'K-NN (Training set)'</span>)</span><br><span class="line">plt.xlabel(<span class="string">'Age'</span>)</span><br><span class="line">plt.ylabel(<span class="string">'Estimated Salary'</span>)</span><br><span class="line">plt.legend()</span><br><span class="line">plt.show()</span><br><span class="line"></span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">from matplotlib.colors import ListedColormap</span></span><br><span class="line"><span class="string">X_set, y_set = X_test, y_test</span></span><br><span class="line"><span class="string">X1, X2 = np.meshgrid(np.arange(start = X_set[:, 0].min() - 1, stop = X_set[:, 0].max() + 1, step = 0.01),</span></span><br><span class="line"><span class="string">                     np.arange(start = X_set[:, 1].min() - 1, stop = X_set[:, 1].max() + 1, step = 0.01))</span></span><br><span class="line"><span class="string">plt.contourf(X1, X2, classifier.predict(np.array([X1.ravel(), X2.ravel()]).T).reshape(X1.shape),</span></span><br><span class="line"><span class="string">             alpha = 0.75, cmap = ListedColormap(('red', 'green')))</span></span><br><span class="line"><span class="string">plt.xlim(X1.min(), X1.max())</span></span><br><span class="line"><span class="string">plt.ylim(X2.min(), X2.max())</span></span><br><span class="line"><span class="string">for i, j in enumerate(np.unique(y_set)):</span></span><br><span class="line"><span class="string">    plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1],</span></span><br><span class="line"><span class="string">                c = ListedColormap(('red', 'green'))(i), label = j)</span></span><br><span class="line"><span class="string">plt.title('K-NN (Test set)')</span></span><br><span class="line"><span class="string">plt.xlabel('Age')</span></span><br><span class="line"><span class="string">plt.ylabel('Estimated Salary')</span></span><br><span class="line"><span class="string">plt.legend()</span></span><br><span class="line"><span class="string">plt.show()</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure>
+        <h2 id="net-http-源码略读"><a href="#net-http-源码略读" class="headerlink" title="net/http 源码略读"></a>net/http 源码略读</h2><h4 id="基本架构"><a href="#基本架构" class="headerlink" title="基本架构"></a>基本架构</h4><p>​    网络发展，很多网络应用都是构建再 HTTP 服务基础之上。HTTP 协议从诞生到现在，发展从1.0，1.1到2.0也不断再进步。理解 HTTP 构建的网络应用只要关注两个端—客户端（clinet）和服务端（server），两个端的交互来自 clinet 的 request，以及server端的response。所谓的http服务器，主要在于如何接受 clinet 的 request，并向client返回response。</p>
+<h4 id="简单应用"><a href="#简单应用" class="headerlink" title="简单应用"></a>简单应用</h4><p>​    以下是最简单的使用net/http库构建的web服务器。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main </span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">"fmt"</span></span><br><span class="line">	<span class="string">"net/http"</span></span><br><span class="line">)</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	handler := <span class="function"><span class="keyword">func</span><span class="params">(w http.ResponseWriter, r *http.Request)</span></span> &#123;</span><br><span class="line">		w.Write([]<span class="keyword">byte</span>(<span class="string">"hello golang\n"</span>))</span><br><span class="line">	&#125;</span><br><span class="line">	http.HandleFunc(<span class="string">"/"</span>, handler)</span><br><span class="line">	http.ListenAndServe(<span class="string">":8080"</span>, <span class="literal">nil</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>​    根据以上的代码，发现主要的是三个部分<code>HandleFunc</code>，<code>ResponseWriter</code>和<code>ListenAndServe</code>。下面将分别解释这三个部分。</p>
+<p>####<code>HandleFunc</code> </p>
+<p>​    实际上<code>http.HandleFunc</code>封装自<code>ServeMux</code>的HandleFunc方法。见如下代码：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">HandleFunc</span><span class="params">(</span></span></span><br><span class="line"><span class="function"><span class="params">	pattern <span class="keyword">string</span>, </span></span></span><br><span class="line"><span class="function"><span class="params">	handler <span class="keyword">func</span>(ResponseWriter, *Request)</span>)</span> &#123;</span><br><span class="line">	DefaultServeMux.HandleFunc(pattern, handler)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>​    接收request的过程中，最重要的莫过于路由（<code>router</code>），这就是内置的<code>DefautServeMux</code>，也可以自定义。Multiplexer路由的目的就是为了找到处理器函数（<code>handler</code>），后者将对request进行处理，同时构建response。Golang中的<code>Multiplexer</code>基于<code>ServeMux</code>结构，同时也实现了<code>Handler</code>接口。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> ServeMux <span class="keyword">struct</span> &#123;</span><br><span class="line">	mu sync.RWMutex</span><br><span class="line">	m <span class="keyword">map</span>[<span class="keyword">string</span>]muxEntry</span><br><span class="line">	hosts <span class="keyword">bool</span> <span class="comment">// 决定是否会保存主机名</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> muxEntry <span class="keyword">struct</span> &#123;</span><br><span class="line">	explicit <span class="keyword">bool</span></span><br><span class="line">	h Handler <span class="comment">//控制器</span></span><br><span class="line">	pattern <span class="keyword">string</span> <span class="comment">//路由</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>​    其中<code>mu</code>字段是读写锁，用于并发读写的数据同步。在并发的时候保证了数据的一致性。<code>m</code>字段是一个字典数据结构，可以看到muxEntry才是路由的保存的地方，也就是一个路径对应一个<code>urlhandler</code>。</p>
+<h4 id="ResponseWriter"><a href="#ResponseWriter" class="headerlink" title="ResponseWriter"></a><code>ResponseWriter</code></h4><p>​    <code>ResponseWriter</code>是一个接口，主要部分就是下面列的三个</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> ResponseWriter <span class="keyword">interface</span> &#123;</span><br><span class="line">   Header() Header</span><br><span class="line">   Write([]<span class="keyword">byte</span>) (<span class="keyword">int</span>, error)</span><br><span class="line">   WriteHeader(statusCode <span class="keyword">int</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>​    其中，Header会返回Http头部内容，write和writeHeader就主要负责写入具体内容到报文。</p>
+<h4 id="ListenAndServe"><a href="#ListenAndServe" class="headerlink" title="ListenAndServe"></a><code>ListenAndServe</code></h4><p>​    在<code>http.ListenAndServe(&quot;:8080&quot;, nil)</code>上，服务器会触发对应模式的handler。</p>
+<p>其具体实现：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Handler <span class="keyword">interface</span> &#123;</span><br><span class="line">	<span class="comment">// 只要实现了ServeHTTP接口就可以用作handler作为ListenAndServe的第二个参数</span></span><br><span class="line">	ServeHTTP(ResponseWriter, *Request)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> ResponseWriter <span class="keyword">interface</span> &#123;</span><br><span class="line">	Header() Header</span><br><span class="line">	Write([]<span class="keyword">byte</span> (<span class="keyword">int</span>, error)</span><br><span class="line">	WriteHeader(<span class="keyword">int</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">ListenAndServe</span><span class="params">(add <span class="keyword">string</span>, handler Handler)</span> <span class="title">error</span></span> &#123;</span><br><span class="line">	<span class="comment">// server内部有一种方法找到我们先前注册的handler</span></span><br><span class="line">	server := &amp;Server&#123;Addr: addr, Handler: Handler&#125; </span><br><span class="line">	<span class="keyword">return</span> server.ListenAndServe()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Server <span class="keyword">struct</span> &#123;</span><br><span class="line">	Addr <span class="keyword">string</span></span><br><span class="line">	Handler Handler</span><br><span class="line">	</span><br><span class="line">	<span class="comment">/* </span></span><br><span class="line"><span class="comment">		包括其他的Server控制参数，包括时间相关的参数</span></span><br><span class="line"><span class="comment">		Header大小、状态、日志、运输层安全。</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	</span><br><span class="line">	mu sync.Mutex</span><br><span class="line">	listeners <span class="keyword">map</span>[net.Listener]<span class="keyword">struct</span>&#123;&#125; <span class="comment">// TCP 底层的连接池</span></span><br><span class="line">	<span class="comment">// 保存HTTP长连接，看HTTP协议版本和HTTP首部字段中的`Connection`的状体</span></span><br><span class="line">	<span class="comment">// 注意map的值是struct&#123;&#125;类型,保证可以存储各类控制handler</span></span><br><span class="line">	activeConn <span class="keyword">map</span>[*conn]<span class="keyword">struct</span>&#123;&#125; </span><br><span class="line">	doneChan <span class="keyword">chan</span> <span class="keyword">struct</span>&#123;&#125; <span class="comment">// Server的停止、关闭控制</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(srv *Server)</span> <span class="title">ListenAndServe</span><span class="params">()</span> <span class="title">error</span></span> &#123;</span><br><span class="line">	<span class="comment">// 忽略细节性代码</span></span><br><span class="line">	addr := srv.Addr</span><br><span class="line">	ln, err := net.Listen(<span class="string">"tcp"</span>, addr) <span class="comment">// 创建tcp连接，addr为监听地址"ip:port"形式的字符串</span></span><br><span class="line">	<span class="keyword">return</span> srv.Serve(tcpKeepAliveListener&#123;ln.(*net.TCPListener)&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h4><p>总而言之，web服务器的基本流程如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Clinet -&gt; Requests -&gt;  [Multiplexer(router)] -&gt; handler  -&gt; Response -&gt; Clinet</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -456,7 +456,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yyhyplxyz.github.io/2018/03/14/sklearn中使用KNN的范例/" title="sklearn中使用KNN的范例">http://yyhyplxyz.github.io/2018/03/14/sklearn中使用KNN的范例/</a>
+    <a href="http://yyhyplxyz.github.io/2018/11/16/net-http-源码略读/" title="net/http 源码略读">http://yyhyplxyz.github.io/2018/11/16/net-http-源码略读/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -478,8 +478,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/14/sql语言初探/" rel="next" title="sql语言优化（1）">
-                <i class="fa fa-chevron-left"></i> sql语言优化（1）
+              <a href="/2018/10/04/go语言并发爬虫/" rel="next" title="go语言并发爬虫">
+                <i class="fa fa-chevron-left"></i> go语言并发爬虫
               </a>
             
           </div>
@@ -487,10 +487,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/16/线性回归实现/" rel="prev" title="线性回归实现">
-                线性回归实现 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -719,7 +715,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#导论"><span class="nav-number">1.</span> <span class="nav-text">导论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#详解"><span class="nav-number">2.</span> <span class="nav-text">详解</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#net-http-源码略读"><span class="nav-number">1.</span> <span class="nav-text">net/http 源码略读</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本架构"><span class="nav-number">1.0.1.</span> <span class="nav-text">基本架构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#简单应用"><span class="nav-number">1.0.2.</span> <span class="nav-text">简单应用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ResponseWriter"><span class="nav-number">1.0.3.</span> <span class="nav-text">ResponseWriter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ListenAndServe"><span class="nav-number">1.0.4.</span> <span class="nav-text">ListenAndServe</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#小结"><span class="nav-number">1.0.5.</span> <span class="nav-text">小结</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
