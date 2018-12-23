@@ -111,23 +111,19 @@
 
 
 
-<meta name="description" content="作业要求这次我们要利用虚拟机搭建一个自己的私有云，并完成图形化界面的远程控制。 基本原理​    一般意义上我们只要搭建一个linux系统，再让其可以访问公网，则可以简单的称为是一个云服务器了，但这次我们作业是要考虑到一个计算机有多个多个虚拟系统，即令一台计算机充当多个虚拟专享服务器，多个虚拟机间构成子网，多台计算机再通过路由器，交换机构成子网，从而让服务商方便快捷地管理云资源。 ​    我们的">
+<meta name="description" content="改用Mysql数据库本次作业要求改BoltDB为Mysql数据库，同时，考虑到后面的作业要求搭建博客。因此将之前写的新闻应用做了重构，改成了一个博客后台。 使用了Beggo框架自带的ORM。个人感觉这类框架内部封装好了很多逻辑，实现功能会比boltdb的键值对操作要容易很多。下面以用户类别为例分别对增删改查四个操作作出解释。 User的模型类别如下，我们可以像下面这样指定对应数据库的列要求。如主键">
 <meta property="og:type" content="article">
-<meta property="og:title" content="搭建私有云桌面">
-<meta property="og:url" content="http://yyhyplxyz.github.io/2018/09/13/服务计算第一次作业/index.html">
+<meta property="og:title" content="容器化搭建Go-Web应用">
+<meta property="og:url" content="http://yyhyplxyz.github.io/2018/12/23/容器化搭建Go-Web应用/index.html">
 <meta property="og:site_name" content="元昊的博客">
-<meta property="og:description" content="作业要求这次我们要利用虚拟机搭建一个自己的私有云，并完成图形化界面的远程控制。 基本原理​    一般意义上我们只要搭建一个linux系统，再让其可以访问公网，则可以简单的称为是一个云服务器了，但这次我们作业是要考虑到一个计算机有多个多个虚拟系统，即令一台计算机充当多个虚拟专享服务器，多个虚拟机间构成子网，多台计算机再通过路由器，交换机构成子网，从而让服务商方便快捷地管理云资源。 ​    我们的">
+<meta property="og:description" content="改用Mysql数据库本次作业要求改BoltDB为Mysql数据库，同时，考虑到后面的作业要求搭建博客。因此将之前写的新闻应用做了重构，改成了一个博客后台。 使用了Beggo框架自带的ORM。个人感觉这类框架内部封装好了很多逻辑，实现功能会比boltdb的键值对操作要容易很多。下面以用户类别为例分别对增删改查四个操作作出解释。 User的模型类别如下，我们可以像下面这样指定对应数据库的列要求。如主键">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/try4.png">
-<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/try5.png">
-<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/try6.png">
-<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/try8.PNG">
-<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/远程控制.PNG">
-<meta property="og:updated_time" content="2018-09-13T11:40:07.000Z">
+<meta property="og:image" content="http://yyhyplxyz.github.io/var/folders/27/4j7qwl0n383_wdy85h_txrzr0000gn/T/abnerworks.Typora/image-20181223125936969.png">
+<meta property="og:updated_time" content="2018-12-23T05:07:42.392Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="搭建私有云桌面">
-<meta name="twitter:description" content="作业要求这次我们要利用虚拟机搭建一个自己的私有云，并完成图形化界面的远程控制。 基本原理​    一般意义上我们只要搭建一个linux系统，再让其可以访问公网，则可以简单的称为是一个云服务器了，但这次我们作业是要考虑到一个计算机有多个多个虚拟系统，即令一台计算机充当多个虚拟专享服务器，多个虚拟机间构成子网，多台计算机再通过路由器，交换机构成子网，从而让服务商方便快捷地管理云资源。 ​    我们的">
-<meta name="twitter:image" content="http://p35v64prn.bkt.clouddn.com/try4.png">
+<meta name="twitter:title" content="容器化搭建Go-Web应用">
+<meta name="twitter:description" content="改用Mysql数据库本次作业要求改BoltDB为Mysql数据库，同时，考虑到后面的作业要求搭建博客。因此将之前写的新闻应用做了重构，改成了一个博客后台。 使用了Beggo框架自带的ORM。个人感觉这类框架内部封装好了很多逻辑，实现功能会比boltdb的键值对操作要容易很多。下面以用户类别为例分别对增删改查四个操作作出解释。 User的模型类别如下，我们可以像下面这样指定对应数据库的列要求。如主键">
+<meta name="twitter:image" content="http://yyhyplxyz.github.io/var/folders/27/4j7qwl0n383_wdy85h_txrzr0000gn/T/abnerworks.Typora/image-20181223125936969.png">
 
 
 
@@ -157,13 +153,13 @@
 
 
 
-  <link rel="canonical" href="http://yyhyplxyz.github.io/2018/09/13/服务计算第一次作业/"/>
+  <link rel="canonical" href="http://yyhyplxyz.github.io/2018/12/23/容器化搭建Go-Web应用/"/>
 
 
 
 
 
-  <title>搭建私有云桌面 | 元昊的博客</title>
+  <title>容器化搭建Go-Web应用 | 元昊的博客</title>
   
 
 
@@ -314,7 +310,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yyhyplxyz.github.io/2018/09/13/服务计算第一次作业/">
+    <link itemprop="mainEntityOfPage" href="http://yyhyplxyz.github.io/2018/12/23/容器化搭建Go-Web应用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jack Yang">
@@ -331,7 +327,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">搭建私有云桌面</h1>
+          <h1 class="post-title" itemprop="name headline">容器化搭建Go-Web应用</h1>
         
 
         <div class="post-meta">
@@ -343,8 +339,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-13T15:04:19+08:00">
-                2018-09-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-23T12:13:00+08:00">
+                2018-12-23
               </time>
             
 
@@ -361,7 +357,7 @@
 
           
           
-             <span id="/2018/09/13/服务计算第一次作业/" class="leancloud_visitors" data-flag-title="搭建私有云桌面">
+             <span id="/2018/12/23/容器化搭建Go-Web应用/" class="leancloud_visitors" data-flag-title="容器化搭建Go-Web应用">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -387,7 +383,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,080
+                  1,066
                 </span>
               
 
@@ -403,7 +399,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4
+                  5
                 </span>
               
             </div>
@@ -424,44 +420,57 @@
       
 
       
-        <h2 id="作业要求"><a href="#作业要求" class="headerlink" title="作业要求"></a>作业要求</h2><p>这次我们要利用虚拟机搭建一个自己的私有云，并完成图形化界面的远程控制。</p>
-<h2 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h2><p>​    一般意义上我们只要搭建一个linux系统，再让其可以访问公网，则可以简单的称为是一个云服务器了，但这次我们作业是要考虑到一个计算机有多个多个虚拟系统，即令一台计算机充当多个虚拟专享服务器，多个虚拟机间构成子网，多台计算机再通过路由器，交换机构成子网，从而让服务商方便快捷地管理云资源。</p>
-<p>​    我们的作业实现思路就是为虚拟机创建两张虚拟网卡，它们分别构成了一个子网络，一张网卡是NAT模式，另一张网卡是仅主机模式。在NAT模式中，主机网卡直接与虚拟NAT设备相连，然后虚拟NAT设备与虚拟DHCP服务器一起连接在虚拟交换机VMnet8上，这样就实现了虚拟机联通外网。而Host-Only模式将虚拟机与外网隔开，使得虚拟机成为一个独立的系统，只与主机相互通讯，从而构成了一个内网。</p>
-<p>​    主要结构如下。</p>
-<p><img src="http://p35v64prn.bkt.clouddn.com/try4.png" alt="git"></p>
-<h2 id="环境安装配置"><a href="#环境安装配置" class="headerlink" title="环境安装配置"></a>环境安装配置</h2><p>​    我们首先下载<a href="https://www.vmware.com/cn/products/workstation-pro/workstation-pro-evaluation.html" target="_blank" rel="noopener">VMware软件</a>，网上可以很容易地找到破解码。接着我们可以到高校ftp上下载<a href="https://mirror.tuna.tsinghua.edu.cn/centos/7.5.1804/isos/x86_64/" target="_blank" rel="noopener">centos</a>系统。</p>
-<p>​    软件安装完毕后，我们将系统添加到VMware workstation pro中，随后我们根据提示设置用户名密码等，完成系统安装即可。进入系统后，我们输入命令</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmtui</span><br></pre></td></tr></table></figure>
-<p>打开图形化界面然后选择激活网卡，如图所示。</p>
-<p><img src="http://p35v64prn.bkt.clouddn.com/try5.png" alt="git"></p>
-<p><img src="http://p35v64prn.bkt.clouddn.com/try6.png" alt="git"></p>
-<p>接着我们在VMware里添加虚拟网卡，在虚拟机-&gt;设置-&gt;添加硬件-&gt;网络适配器中选择仅主机模式 ，如下图所示</p>
-<p><img src="http://p35v64prn.bkt.clouddn.com/try8.PNG" alt="git"></p>
-<p>此时我们配置了两张网卡，进入系统看下能否ping通百度等网站，如果不成功则需要进行网络开启的操作。运行如下命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/sysconfig/network-scripts/</span><br></pre></td></tr></table></figure>
-<p>打开某个对应系统网卡的文件，不清楚可以使用<code>ifconfig</code>命令来查看网卡和ip。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi ifcfg-ens33</span><br></pre></td></tr></table></figure>
-<p>将ONBOOT设置成yes，接着重启网络服务</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service network restart</span><br></pre></td></tr></table></figure>
-<p>这样，我们就做到了开机自动启动网络服务，我们可以上网了。</p>
-<p>​    然后，我们更新和安装一些必要的软件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">yum install wegt</span><br><span class="line">yum update</span><br><span class="line"></span><br><span class="line">yum groupinstall "X Window System"</span><br><span class="line">yum groupinstall "GNOME Desktop"</span><br><span class="line">systemctl set-default multi-user.target  //设置成命令模式</span><br><span class="line">systemctl set-default graphical.target  //设置成图形模式</span><br><span class="line">shutdown -r now #重启</span><br></pre></td></tr></table></figure>
-<p>​    此时我们重启后看到的应该是图形化界面了。</p>
-<p>​    接着，我们使用 windows 的远程桌面控制来访问我们的虚拟机。但是 windows 的远程桌面使用 RDP 协议，而 linux 系统原生并不支持此协议。因此我们需要在 linux 系统安装 XRDP 来支持协议。</p>
-<p>- 下载安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">su #图形化界面账号为非root账号，su获取root权限</span><br><span class="line">#root password</span><br><span class="line">yum install epel-release #社区对于yum的补充开源库</span><br><span class="line">yum install xrdp</span><br><span class="line">yum install tigervnc-server</span><br></pre></td></tr></table></figure>
-<p>- 开启 XRDP</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl start xrdp</span><br><span class="line">systemctl enable xrdp</span><br></pre></td></tr></table></figure>
-<p>XRDP 默认监听的端口号是3389 ，我们远程连接就可以使用这个端口号</p>
-<p>- 关闭防火墙</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld</span><br><span class="line">systemctl disable firewalld</span><br></pre></td></tr></table></figure>
-<p>- 或不关闭防火墙，添加防火墙例外，打开3389端口命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --permanent --zone=public --add-port=3389/tcp</span><br><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
-<p>- 启动xrdp服务，并且设置为开机启动</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl start xrdp</span><br><span class="line">systemctl enable xrdp</span><br></pre></td></tr></table></figure>
-<h2 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h2><p>​    经过了上面的操作步骤后，我们打开远程桌面连接，就可以连接上远程服务器了，实验效果如图所示。</p>
-<p><img src="http://p35v64prn.bkt.clouddn.com/远程控制.PNG" alt="git"></p>
-<p>​    我们需要多个虚拟机的话，那么，刚刚配置的虚拟机，就可以作为 base，我们 clone 这个虚拟机就好了。链接克隆和完整克隆都可以，具体操纵比较简单就不再赘述了，克隆完毕后我们进入新的虚拟机系统，查看ip，同样可以远程连接到这个虚拟机系统上面去。</p>
+        <h2 id="改用Mysql数据库"><a href="#改用Mysql数据库" class="headerlink" title="改用Mysql数据库"></a>改用Mysql数据库</h2><p>本次作业要求改BoltDB为Mysql数据库，同时，考虑到后面的作业要求搭建博客。因此将之前写的新闻应用做了重构，改成了一个博客后台。</p>
+<p>使用了Beggo框架自带的ORM。个人感觉这类框架内部封装好了很多逻辑，实现功能会比boltdb的键值对操作要容易很多。下面以用户类别为例分别对增删改查四个操作作出解释。</p>
+<p>User的模型类别如下，我们可以像下面这样指定对应数据库的列要求。如主键pk，自增auto，可以为空null与不可重复unique等。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> &#123;</span><br><span class="line">  Id        <span class="keyword">int</span>       <span class="string">`orm:"pk;auto"`</span></span><br><span class="line">  Username  <span class="keyword">string</span>    <span class="string">`orm:"unique"`</span></span><br><span class="line">  Password  <span class="keyword">string</span></span><br><span class="line">  Token     <span class="keyword">string</span>    <span class="string">`orm:"unique"`</span></span><br><span class="line">  Avatar    <span class="keyword">string</span></span><br><span class="line">  Email     <span class="keyword">string</span>    <span class="string">`orm:"null"`</span></span><br><span class="line">  Url       <span class="keyword">string</span>    <span class="string">`orm:"null"`</span></span><br><span class="line">  Signature <span class="keyword">string</span>    <span class="string">`orm:"null;size(1000)"`</span></span><br><span class="line">  InTime    time.Time <span class="string">`orm:"auto_now_add;type(datetime)"`</span></span><br><span class="line">  Roles     []*Role   <span class="string">`orm:"rel(m2m)"`</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>增加操作</p>
+<p>在用户注册页面，当我们根据用户的输入构建好了user类后，就可以通过如下函数进行用户的创建，注册。</p>
+<p>orm是单例模式，如下一行简单的insert就做到了。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">SaveUser</span><span class="params">(user *User)</span> <span class="title">int64</span></span> &#123;</span><br><span class="line">  o := orm.NewOrm()</span><br><span class="line">  id, _ := o.Insert(user)</span><br><span class="line">  <span class="keyword">return</span> id</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除操作</p>
+<p>实际博客应用中很少删除用户，为了演示使用下面的函数。同样的传入user类后，一行简单的delete就做到了。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">DeleteUser</span><span class="params">(user *User)</span></span> &#123;</span><br><span class="line">  o := orm.NewOrm()</span><br><span class="line">  o.Delete(user)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改操作</p>
+<p>如上，因为指定了id为主键，所以update的时候会查找主键相同的，再进行修改</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">UpdateUser</span><span class="params">(user *User)</span></span> &#123;</span><br><span class="line">  o := orm.NewOrm()</span><br><span class="line">  o.Update(user)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>查找操作</p>
+<p>查找的语句较麻烦，我们需要指定一个数据表，指明过滤的字段和条件，并将user类型指针传入以获得查找到的结果。</p>
+</li>
+</ul>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Login</span><span class="params">(username <span class="keyword">string</span>)</span> <span class="params">(<span class="keyword">bool</span>, User)</span></span> &#123;</span><br><span class="line">  o := orm.NewOrm()</span><br><span class="line">  <span class="keyword">var</span> user User</span><br><span class="line">  err := o.QueryTable(user).Filter(<span class="string">"Username"</span>, username).One(&amp;user)</span><br><span class="line">  <span class="keyword">return</span> err != orm.ErrNoRows, user</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>除了上述的操作外，我们还可以用数据库原生语句来执行命令。如下以增删为例。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">DeleteUserRolesByUserId</span><span class="params">(user_id <span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">  o := orm.NewOrm()</span><br><span class="line">  o.Raw(<span class="string">"delete from user_roles where user_id = ?"</span>, user_id).Exec()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">SaveUserRole</span><span class="params">(user_id <span class="keyword">int</span>, role_id <span class="keyword">int</span>)</span></span> &#123;</span><br><span class="line">  o := orm.NewOrm()</span><br><span class="line">  o.Raw(<span class="string">"insert into user_roles (user_id, role_id) values (?, ?)"</span>, user_id, role_id).Exec()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我们构建好了model后，就可以注册数据库了。</p>
+<p>如下我们需要指明数据库的地址，用户名，密码数据库名，通过<code>orm.RegisterDataBase</code>注册数据库，通过<code>orm.RegisterDriver</code>注册mysql驱动。之后我们还需要依次注册各个model，并同步数据库<code>orm.RunSyncdb</code>。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">init</span><span class="params">()</span></span> &#123;</span><br><span class="line">    orm.RegisterDriver(<span class="string">"mysql"</span>, orm.DR_MySQL)</span><br><span class="line">  orm.RegisterDataBase(<span class="string">"default"</span>, <span class="string">"mysql"</span>, username+<span class="string">":"</span>+password+<span class="string">"@tcp("</span>+url+<span class="string">":"</span>+port+<span class="string">")/pybbs?charset=utf8&amp;parseTime=true&amp;charset=utf8&amp;loc=Asia%2FShanghai"</span>, <span class="number">30</span>)</span><br><span class="line">  orm.RegisterModel(</span><br><span class="line">    <span class="built_in">new</span>(models.User),</span><br><span class="line">    <span class="built_in">new</span>(models.Topic),</span><br><span class="line">    <span class="built_in">new</span>(models.Section),</span><br><span class="line">    <span class="built_in">new</span>(models.Reply),</span><br><span class="line">    <span class="built_in">new</span>(models.ReplyUpLog),</span><br><span class="line">    <span class="built_in">new</span>(models.Role),</span><br><span class="line">    <span class="built_in">new</span>(models.Permission))</span><br><span class="line">  orm.RunSyncdb(<span class="string">"default"</span>, <span class="literal">false</span>, <span class="literal">true</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="/var/folders/27/4j7qwl0n383_wdy85h_txrzr0000gn/T/abnerworks.Typora/image-20181223125936969.png" alt="image-20181223125936969"></p>
+<h2 id="Docker构建容器"><a href="#Docker构建容器" class="headerlink" title="Docker构建容器"></a>Docker构建容器</h2><ul>
+<li><p>mysql镜像</p>
+<p>我们在安装了docker后，</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker pull mysql:5.6</span><br><span class="line">docker images |grep mysql</span><br><span class="line">docker run -p 3306:3306 --name mymysql -v $PWD/conf:/etc/mysql/conf.d -v $PWD/logs:/logs -v $PWD/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.6</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>-p 3306:3306</strong>：将容器的 3306 端口映射到主机的 3306 端口。</li>
+<li><strong>-v -v $PWD/conf:/etc/mysql/conf.d</strong>：将主机当前目录下的 conf/my.cnf 挂载到容器的 /etc/mysql/my.cnf。</li>
+<li><strong>-v $PWD/logs:/logs</strong>：将主机当前目录下的 logs 目录挂载到容器的 /logs。</li>
+<li><strong>-v $PWD/data:/var/lib/mysql</strong> ：将主机当前目录下的data目录挂载到容器的 /var/lib/mysql 。</li>
+<li><strong>-e MYSQL_ROOT_PASSWORD=123456：</strong>初始化 root 用户的密码。</li>
+</ul>
+</li>
+<li><p>node镜像</p>
+</li>
+</ul>
+  <figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> node:carbon</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建 app 目录</span></span><br><span class="line"><span class="keyword">WORKDIR</span> /app</span><br><span class="line"></span><br><span class="line"># 安装 app 依赖</span><br><span class="line"># 使用通配符确保 package.json 与 package-lock.json 复制到需要的地方。（npm 版本 5 以上） COPY package*.json ./</span><br><span class="line"></span><br><span class="line">RUN npm install</span><br><span class="line"># 如果你需要构建生产环境下的代码，请使用：</span><br><span class="line"># RUN npm install --only=production</span><br><span class="line"></span><br><span class="line"># 打包 app 源码</span><br><span class="line">COPY src /app</span><br><span class="line"></span><br><span class="line">EXPOSE 8080</span><br><span class="line">CMD [ "node", "server.js" ]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>go镜像</li>
+</ul>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> golang:latest</span><br><span class="line"></span><br><span class="line"><span class="keyword">WORKDIR</span> $GOPATH/src/hellodocker</span><br><span class="line">ADD . $GOPATH/src/hellodocker</span><br><span class="line">RUN go get github.com/astaxie/beego</span><br><span class="line">RUN go get github.com/beego/bee</span><br><span class="line">RUN go build .</span><br><span class="line"></span><br><span class="line">EXPOSE 8080</span><br><span class="line"></span><br><span class="line">CMD [ "bee", "run" ]</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -t hellodocker .</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 8080:8080 -d hellodocker</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -482,7 +491,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yyhyplxyz.github.io/2018/09/13/服务计算第一次作业/" title="搭建私有云桌面">http://yyhyplxyz.github.io/2018/09/13/服务计算第一次作业/</a>
+    <a href="http://yyhyplxyz.github.io/2018/12/23/容器化搭建Go-Web应用/" title="容器化搭建Go-Web应用">http://yyhyplxyz.github.io/2018/12/23/容器化搭建Go-Web应用/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -504,8 +513,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/30/SQL期中实验报告/" rel="next" title="SQL期中实验报告">
-                <i class="fa fa-chevron-left"></i> SQL期中实验报告
+              <a href="/2018/11/16/net-http-源码略读/" rel="next" title="net/http 源码略读">
+                <i class="fa fa-chevron-left"></i> net/http 源码略读
               </a>
             
           </div>
@@ -513,10 +522,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/27/CentOS下Golang配置/" rel="prev" title="CentOS下Golang配置">
-                CentOS下Golang配置 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -745,7 +750,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#作业要求"><span class="nav-number">1.</span> <span class="nav-text">作业要求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本原理"><span class="nav-number">2.</span> <span class="nav-text">基本原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境安装配置"><span class="nav-number">3.</span> <span class="nav-text">环境安装配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验结果"><span class="nav-number">4.</span> <span class="nav-text">实验结果</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#改用Mysql数据库"><span class="nav-number">1.</span> <span class="nav-text">改用Mysql数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker构建容器"><span class="nav-number">2.</span> <span class="nav-text">Docker构建容器</span></a></li></ol></div>
             
 
           </div>
