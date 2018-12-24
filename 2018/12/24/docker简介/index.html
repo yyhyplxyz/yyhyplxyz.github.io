@@ -111,20 +111,17 @@
 
 
 
-<meta name="description" content="基本认识sql语言不是图灵完备的，顾名思义，它是不能作出图灵机的。从中也可以见的它的语法是蛮简单的。 几个基本优化方法虽然基本语法很简单，大家看看就会了。但是每一个数据提取，修改的操作效率都具有很大提升空间。 使用join 代替in在这个博客地址中http://openxtiger.iteye.com/blog/1911228 ，作者做了实验证明了join操作会比子查询效率高很多。事实上，子查询操">
+<meta name="description" content="镜像和容器镜像和容器是 Docker 中最基本的 2 个概念，镜像相当于光盘， 光盘里面存储的数据是只读的， 不会被更改的。我们可以把镜像找作一个模板或者蓝图，而容器是用镜像生成的 Docker 实例。一个镜像可以生成多个容器， 每个容器之间，容器与宿主机之间都是相互隔离的，同时，容器可以快速方便地运行, 也可以方便地删除。在实际应用中，我们甚至可以把容器当作虚拟机来使用。 自动部署与Docker">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sql语言优化（1）">
-<meta property="og:url" content="http://yyhyplxyz.github.io/2018/03/14/sql语言初探/index.html">
+<meta property="og:title" content="docker介绍深入浅出(-)">
+<meta property="og:url" content="http://yyhyplxyz.github.io/2018/12/24/docker简介/index.html">
 <meta property="og:site_name" content="元昊的博客">
-<meta property="og:description" content="基本认识sql语言不是图灵完备的，顾名思义，它是不能作出图灵机的。从中也可以见的它的语法是蛮简单的。 几个基本优化方法虽然基本语法很简单，大家看看就会了。但是每一个数据提取，修改的操作效率都具有很大提升空间。 使用join 代替in在这个博客地址中http://openxtiger.iteye.com/blog/1911228 ，作者做了实验证明了join操作会比子查询效率高很多。事实上，子查询操">
+<meta property="og:description" content="镜像和容器镜像和容器是 Docker 中最基本的 2 个概念，镜像相当于光盘， 光盘里面存储的数据是只读的， 不会被更改的。我们可以把镜像找作一个模板或者蓝图，而容器是用镜像生成的 Docker 实例。一个镜像可以生成多个容器， 每个容器之间，容器与宿主机之间都是相互隔离的，同时，容器可以快速方便地运行, 也可以方便地删除。在实际应用中，我们甚至可以把容器当作虚拟机来使用。 自动部署与Docker">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/2018-3-16.1.png">
-<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/2018-3-16.2.png">
-<meta property="og:updated_time" content="2018-03-17T15:55:58.000Z">
+<meta property="og:updated_time" content="2018-12-24T15:33:36.757Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="sql语言优化（1）">
-<meta name="twitter:description" content="基本认识sql语言不是图灵完备的，顾名思义，它是不能作出图灵机的。从中也可以见的它的语法是蛮简单的。 几个基本优化方法虽然基本语法很简单，大家看看就会了。但是每一个数据提取，修改的操作效率都具有很大提升空间。 使用join 代替in在这个博客地址中http://openxtiger.iteye.com/blog/1911228 ，作者做了实验证明了join操作会比子查询效率高很多。事实上，子查询操">
-<meta name="twitter:image" content="http://p35v64prn.bkt.clouddn.com/2018-3-16.1.png">
+<meta name="twitter:title" content="docker介绍深入浅出(-)">
+<meta name="twitter:description" content="镜像和容器镜像和容器是 Docker 中最基本的 2 个概念，镜像相当于光盘， 光盘里面存储的数据是只读的， 不会被更改的。我们可以把镜像找作一个模板或者蓝图，而容器是用镜像生成的 Docker 实例。一个镜像可以生成多个容器， 每个容器之间，容器与宿主机之间都是相互隔离的，同时，容器可以快速方便地运行, 也可以方便地删除。在实际应用中，我们甚至可以把容器当作虚拟机来使用。 自动部署与Docker">
 
 
 
@@ -154,13 +151,13 @@
 
 
 
-  <link rel="canonical" href="http://yyhyplxyz.github.io/2018/03/14/sql语言初探/"/>
+  <link rel="canonical" href="http://yyhyplxyz.github.io/2018/12/24/docker简介/"/>
 
 
 
 
 
-  <title>sql语言优化（1） | 元昊的博客</title>
+  <title>docker介绍深入浅出(-) | 元昊的博客</title>
   
 
 
@@ -311,7 +308,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yyhyplxyz.github.io/2018/03/14/sql语言初探/">
+    <link itemprop="mainEntityOfPage" href="http://yyhyplxyz.github.io/2018/12/24/docker简介/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jack Yang">
@@ -328,7 +325,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">sql语言优化（1）</h1>
+          <h1 class="post-title" itemprop="name headline">docker介绍深入浅出(-)</h1>
         
 
         <div class="post-meta">
@@ -340,8 +337,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-14T14:24:12+08:00">
-                2018-03-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-24T22:18:40+08:00">
+                2018-12-24
               </time>
             
 
@@ -358,7 +355,7 @@
 
           
           
-             <span id="/2018/03/14/sql语言初探/" class="leancloud_visitors" data-flag-title="sql语言优化（1）">
+             <span id="/2018/12/24/docker简介/" class="leancloud_visitors" data-flag-title="docker介绍深入浅出(-)">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -384,7 +381,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  767
+                  1,941
                 </span>
               
 
@@ -400,7 +397,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  8
                 </span>
               
             </div>
@@ -421,35 +418,85 @@
       
 
       
-        <h1 id="基本认识"><a href="#基本认识" class="headerlink" title="基本认识"></a>基本认识</h1><p>sql语言不是图灵完备的，顾名思义，它是不能作出图灵机的。从中也可以见的它的语法是蛮简单的。</p>
-<h2 id="几个基本优化方法"><a href="#几个基本优化方法" class="headerlink" title="几个基本优化方法"></a>几个基本优化方法</h2><p>虽然基本语法很简单，大家看看就会了。但是每一个数据提取，修改的操作效率都具有很大提升空间。</p>
-<h3 id="使用join-代替in"><a href="#使用join-代替in" class="headerlink" title="使用join 代替in"></a>使用join 代替in</h3><p>在这个博客地址中<a href="http://openxtiger.iteye.com/blog/1911228" target="_blank" rel="noopener">http://openxtiger.iteye.com/blog/1911228</a> ，作者做了实验证明了join操作会比子查询效率高很多。事实上，子查询操作要循环多次查找子表，耗时较多，而join方法会将多个表格连接起来，可以避免多次循环查找的问题。</p>
-<p>比如下面这两个写法是等价的</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> * <span class="keyword">from</span> hotel_info_original <span class="keyword">as</span> c </span><br><span class="line"><span class="keyword">left</span> <span class="keyword">join</span> hotel_info_collection h </span><br><span class="line"><span class="keyword">on</span> c.hotel_type=h.hotel_type <span class="keyword">and</span> c.hotel_id =h.hotel_id </span><br><span class="line"><span class="keyword">where</span> h.hotel_id <span class="keyword">is</span> <span class="literal">null</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> c.* <span class="keyword">from</span> hotel_info_original </span><br><span class="line"><span class="keyword">where</span> c.hotel_id <span class="keyword">not</span> <span class="keyword">in</span> (<span class="keyword">select</span> h.hotel_id <span class="keyword">from</span>  hotel_info_collection <span class="keyword">where</span> h.hotel_type = c.hotel_type)</span><br></pre></td></tr></table></figure>
-<p>Left join是左连接，即从左表(A)产生一套完整的记录,与匹配的记录(右表(B)) .如果没有匹配,右侧将包含null</p>
-<p><img src="http://p35v64prn.bkt.clouddn.com/2018-3-16.1.png" alt="git"></p>
-<p>实际上它是将左表和右表完全拼接起来，不满足on中条件的全部变成NULL。因此在数据库操作过程中，要尽量的多将语句写在on中，这样可以减少where查询时间，也能够提高效率。还不理解的，可以看下图实例再揣摩一下</p>
-<p><img src="http://p35v64prn.bkt.clouddn.com/2018-3-16.2.png" alt="git"></p>
-<h3 id="使用工具进行大表修改"><a href="#使用工具进行大表修改" class="headerlink" title="使用工具进行大表修改"></a>使用工具进行大表修改</h3><p>我们知道在实际应用过程中，当对大表进行修改数据类型时，会造成数据库结构较大的变动。此时mysql会锁表，一切请求只能读不能写，造成大量请求排队，效率极低。因此一个改进的办法就是在主服务器重新建一个表，在旧表上每个entry都安装触发器，修改的请求将会在旧表上进行。这些变化再同步到新表中。</p>
-<p>实际编程较繁琐，起码我不会QUQ</p>
-<p>但是大佬们帮我们封装好了工具，那就是<a href="https://www.percona.com/doc/percona-toolkit/LATEST/pt-online-schema-change.html" target="_blank" rel="noopener">pt-online-schema-change</a>，自己去官网上免费下载安装就好啦。</p>
-<p>基本参数信息如下</p>
+        <h2 id="镜像和容器"><a href="#镜像和容器" class="headerlink" title="镜像和容器"></a>镜像和容器</h2><p>镜像和容器是 Docker 中最基本的 2 个概念，镜像相当于光盘， 光盘里面存储的数据是只读的， 不会被更改的。我们可以把镜像找作一个模板或者蓝图，而容器是用镜像生成的 Docker 实例。一个镜像可以生成多个容器， 每个容器之间，容器与宿主机之间都是相互隔离的，同时，容器可以快速方便地运行, 也可以方便地删除。在实际应用中，我们甚至可以把容器当作虚拟机来使用。</p>
+<h2 id="自动部署与Dockerfile"><a href="#自动部署与Dockerfile" class="headerlink" title="自动部署与Dockerfile"></a>自动部署与Dockerfile</h2><p>我们首先需要安装一个docker，这部分内容略，读者可以轻易在网上找到资料，且操作极易。</p>
+<h3 id="运行第一个容器应用"><a href="#运行第一个容器应用" class="headerlink" title="运行第一个容器应用"></a>运行第一个容器应用</h3><p>我们使用下面的命令启动一个 Docker 容器</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="keyword">run</span> -d -t -p 8000:5000 -name demo ubuntu:18.04</span><br></pre></td></tr></table></figure>
+<p>这条命令的具体解释如下</p>
 <ul>
-<li><p><code>--host=xxx --user=xxx --password=xxx</code><br>连接实例信息，缩写<code>-h xxx -u xxx -p xxx</code>，密码可以使用参数<code>--ask-pass</code> 手动输入。</p>
+<li><p>run 表示启动一个新的 Docker 容器</p>
 </li>
-<li><p><code>--alter</code></p>
-<p>结构变更语句</p>
+<li><p>-d 表示容器在后台运行 </p>
+</li>
+<li><p>-t 极少能用到， 用于让一个空白的 ubuntu 镜像在后台运行</p>
+</li>
+<li><p>-p 用于指定端口映射′ 表示在本机访问 8000 会被自动转到容器中的 5000 端口<br>必须保证本机没有其他程序占用了 8000 端口， 否则这里会失败</p>
+</li>
+<li><p>-name demo 指定了容器的名字是 demo</p>
+</li>
+<li><p>ubuntu:18.04 是启动容器使用的镜像名，Docker 会自动从镜像服务器去下载这个镜像</p>
 </li>
 </ul>
+<h3 id="运行一个简单的web应用"><a href="#运行一个简单的web应用" class="headerlink" title="运行一个简单的web应用"></a>运行一个简单的web应用</h3><p>这次我们选择开一个新容器，并提供web服务。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -t -d -p 7000:5000 -name demo ubuntu:18.04</span><br></pre></td></tr></table></figure>
+<p>由于之前已经自动下载过 ubuntu:18.04 所以这次不会重新下载镜像, 速度很快，这个新的容器名叫demo。</p>
+<p>我们首先在本地准备好运行的代码文件<code>a.py</code>，如下</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> flask <span class="keyword">import</span> Flask</span><br><span class="line">app = Flask(__name__)</span><br><span class="line"></span><br><span class="line"><span class="meta">@app.route('/')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">index</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="string">'Hello World'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    app.run(host=<span class="string">"0.0.0.0"</span>, debug=<span class="keyword">True</span>)</span><br></pre></td></tr></table></figure>
+<p>接着我们在容器内创建目录，<code>exec</code> 命令后跟随容器名，然后再添加操作命令<code>mkdir /code</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec demol mkdir /code</span><br></pre></td></tr></table></figure>
+<p><code>cp</code> 参数把当前文件夹的<code>a.py</code>拷贝到 demo 容器的 <code>/Code/a.py</code>处。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker cp a.py "demo:/code/a.py"</span><br></pre></td></tr></table></figure>
+<p> <code>/code</code>必须是容器中存在的目录， Docker 不会自动创建，因此我们需要先手动创建。</p>
+<p>接着我们同样用exec安装必要的依赖</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker exec demo apt update</span><br><span class="line"></span><br><span class="line">docker exec demo apt -y install  python3 python3-pip</span><br><span class="line"></span><br><span class="line">docker exec demo pip3 install flask</span><br></pre></td></tr></table></figure>
+<p>然后在容器 demo 中运行<code>a.py</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker exec demo python3  /code/o.py</span><br></pre></td></tr></table></figure>
+<p>通过以上的操作，我们并在容器中安装程序运行所需的依赖库然后运行了一个 flask web 程序</p>
+<p>以上操作较繁琐，我们也可以新建两个脚本文件<code>install.sh</code>和<code>run.sh</code>，然后直接运行脚本文件。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>install.sh</span><br><span class="line">apt update</span><br><span class="line">apt -y install python3 python3-pip</span><br><span class="line">pip3 install flask</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>run.sh</span><br><span class="line">cd /code</span><br><span class="line">python3 a.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">docker cp install.sh "demol:/code/install.sh"</span><br><span class="line"></span><br><span class="line">docker cp run.sh "demo1:/code/run.sh"</span><br><span class="line"></span><br><span class="line">docker exec demol bash /code/install.sh</span><br><span class="line"></span><br><span class="line">docker exec demol bash /code/run.sh</span><br></pre></td></tr></table></figure>
+<h3 id="Dockerfile自动化操作"><a href="#Dockerfile自动化操作" class="headerlink" title="Dockerfile自动化操作"></a>Dockerfile自动化操作</h3><p>在本文件夹下，除了<code>a.py</code>外，我们又新建了个Dockerfile文件，如下。</p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在 Dockerfile 文件中 # 是注释</span></span><br><span class="line"><span class="comment"># FROM 用于指定构建镜像使用的基础镜像</span></span><br><span class="line"><span class="keyword">FROM</span> ubuntu:<span class="number">18.04</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># RUN 用于在构建镜像的时候在镜像中执行命令</span></span><br><span class="line"><span class="comment"># 这里我们安装 python3 和 flask web 框架</span></span><br><span class="line"><span class="keyword">RUN</span> apt update</span><br><span class="line">RUN apt -y install python3 python3-pip</span><br><span class="line">RUN pip3 install flask</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># COPY 相当于命令的 docker cp</span><br><span class="line"># 把本机当前目录下的 app.py 文件拷贝到镜像的 /code/app.py</span><br><span class="line"># 和 docker cp 不同的是，COPY 会自动创建镜像中不存在的目录，比如 /code</span><br><span class="line">COPY app.py /code/app.py</span><br><span class="line"></span><br><span class="line"># WORKDIR 用于指定从镜像启动的容器内的工作目录</span><br><span class="line">WORKDIR /code</span><br><span class="line"></span><br><span class="line"># CMD 用于指定容器运行后要执行的命令和参数列表</span><br><span class="line"># 这样从本镜像启动容器后会自动执行 python3 app.py 这个命令</span><br><span class="line"># 由于我们已经用 WORKDIR 指定了容器的工作目录</span><br><span class="line"># 所以下面的命令都是在 /code 下执行的</span><br><span class="line">CMD ["python3", "app.py"]</span><br></pre></td></tr></table></figure>
+<p>我们可以直接运行下面的命令构建镜像</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -t webimage .</span><br></pre></td></tr></table></figure>
+<p><code>-t webimage</code> 指定了镜像的名字为 webimage，最后的那个 . 用来表示工作目录为本机当前目录。<br>随后我们可以直接用该镜像来运行容器</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 8001:5000 -name demo2 webimage</span><br></pre></td></tr></table></figure>
+<h3 id="docker-常用命令"><a href="#docker-常用命令" class="headerlink" title="docker 常用命令"></a>docker 常用命令</h3><p>启动一个停止运行的容器</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker start demo</span><br></pre></td></tr></table></figure>
+<p>查找正在运行的容器</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
+<p>停止容器， demo 是容器的名字</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stop demo</span><br></pre></td></tr></table></figure>
+<p>可以用 -o 参数查找所有容器, 包括未运行的</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>删除被停止的容器和运行中的容器</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker rm demo</span><br><span class="line">docker rm -f demo</span><br></pre></td></tr></table></figure>
+<h2 id="数据卷与文件挂载"><a href="#数据卷与文件挂载" class="headerlink" title="数据卷与文件挂载"></a>数据卷与文件挂载</h2><p>我们可以在概念上把 Docker 找作虚拟机。当容器被删除的时候， 容器里的所有数据都会被删除，两个不同的容器之间无法互通。基于这些因素 Docker 推出了 数据卷 (volume) 功能。<br>我们可以把数据卷理解为虚拟机的虚拟磁盘， 它是独立于容器的文件，在容器中它破挂载为一个目录的形式。对于容器中的应用来说， 数据卷是透明的， 无法感知它的存在， 它就是一个普通的文件夹。由于数据卷独立于容器而存在, 因此删除容器的时候数据卷不会受到影响。<br>数据卷有以下优点</p>
 <ul>
-<li><code>D=db_name,t=table_name</code><br>指定要ddl的数据库名和表名</li>
-<li><code>--execute</code><br>确定修改表，则指定该参数。真正执行alter。</li>
-<li><code>--execute</code><br>确定修改表，则指定该参数。真正执行alter。–dry-run与–execute必须指定一个，二者相互排斥</li>
-<li><code>--execute</code><br>确定修改表，则指定该参数。真正执行alter。–dry-run与–execute必须指定一个，二者相互排斥</li>
-<li><code>--execute</code><br>确定修改表，则指定该参数。真正执行alter。–dry-run与–execute必须指定一个，二者相互排斥</li>
+<li>多容器可以通过挂载同一个数据卷来共享数据</li>
+<li>数据卷可以方便地备份存储数据</li>
 </ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pt-online-schema-<span class="keyword">change</span> -ujacky -p xxx -h <span class="string">"10.0.201.34"</span> D=confluence,t=sbtest3 \</span><br><span class="line"><span class="comment">--alter "CHANGE pad f_pad varchar(60) NOT NULL DEFAULT '' " \</span></span><br><span class="line"><span class="comment">--execute</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>创建一个 volume</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker volume create testvolume</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>列出所有数据卷</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker volume ls</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>删除一个数据卷</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker volume rm testvolume</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>我们下面来找一下如何在容器中使用数据卷</p>
+<p>先创建一个数据卷web，接着在运行容器webimage的时候， 使用参数 -mount 如下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d --name demovolume -mount source=web, target=/volume webimage</span><br></pre></td></tr></table></figure>
+<p>后面参数的含义是把数据卷挂载到容器的 /volume 目录上</p>
+<p>这样就运行了一个带有数据卷的容器， 这个容器的 /VoIume 目录中的内容在容器被删除后仍然存在。因为它实际上是存在 Docker 数据卷中。没有保存在数据卷上的文件会在容器被删除后丢失</p>
+<p>这样我们就可以实现多容器之间可以通过数据卷共享文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -d -name demovolume2 -mount source=web,target=/volume webimage</span><br></pre></td></tr></table></figure>
+<p>除了挂载数据卷外, Docker 还可以挂载共享目录 (这一点和虚拟机一样)。共享目录的优势是使用方便， 易于理解。我们开发时在宿主机中修改源代码就可以做到docker中实时生效省却 build 镜像的过程。<br>下面的命令会从 nginx 镜像运行一个名为 nginx1 的容器，井且设置了 8080-&gt;80 的端口映射，mount 参数的 type=bind 表明要挂载共享目录，把宿主机的当前目录映射为容器的 /usr/share/nginx/html<br>(这是 nginx 容器的静态页面文件存放路径).这样在宿主机中访问localhost:8080 会自动访问宿主机当前目录下的 index.html 文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -p 8080:80 -name nginx1 -mount type=bind, source="$&#123;PWD&#125;" ,target=/usr/share/nginx/html/ nginx</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -470,7 +517,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yyhyplxyz.github.io/2018/03/14/sql语言初探/" title="sql语言优化（1）">http://yyhyplxyz.github.io/2018/03/14/sql语言初探/</a>
+    <a href="http://yyhyplxyz.github.io/2018/12/24/docker简介/" title="docker介绍深入浅出(-)">http://yyhyplxyz.github.io/2018/12/24/docker简介/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -492,8 +539,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/13/梯度下降法简单实现/" rel="next" title="梯度下降法简单实现">
-                <i class="fa fa-chevron-left"></i> 梯度下降法简单实现
+              <a href="/2018/12/23/容器化搭建Go-Web应用/" rel="next" title="容器化搭建Go-Web应用">
+                <i class="fa fa-chevron-left"></i> 容器化搭建Go-Web应用
               </a>
             
           </div>
@@ -501,10 +548,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/14/sklearn中使用KNN的范例/" rel="prev" title="sklearn中使用KNN的范例">
-                sklearn中使用KNN的范例 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -733,7 +776,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基本认识"><span class="nav-number">1.</span> <span class="nav-text">基本认识</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#几个基本优化方法"><span class="nav-number">1.1.</span> <span class="nav-text">几个基本优化方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用join-代替in"><span class="nav-number">1.1.1.</span> <span class="nav-text">使用join 代替in</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用工具进行大表修改"><span class="nav-number">1.1.2.</span> <span class="nav-text">使用工具进行大表修改</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#镜像和容器"><span class="nav-number">1.</span> <span class="nav-text">镜像和容器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自动部署与Dockerfile"><span class="nav-number">2.</span> <span class="nav-text">自动部署与Dockerfile</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#运行第一个容器应用"><span class="nav-number">2.1.</span> <span class="nav-text">运行第一个容器应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行一个简单的web应用"><span class="nav-number">2.2.</span> <span class="nav-text">运行一个简单的web应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dockerfile自动化操作"><span class="nav-number">2.3.</span> <span class="nav-text">Dockerfile自动化操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#docker-常用命令"><span class="nav-number">2.4.</span> <span class="nav-text">docker 常用命令</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据卷与文件挂载"><span class="nav-number">3.</span> <span class="nav-text">数据卷与文件挂载</span></a></li></ol></div>
             
 
           </div>
