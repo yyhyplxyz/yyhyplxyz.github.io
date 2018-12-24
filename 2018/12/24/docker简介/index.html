@@ -118,7 +118,7 @@
 <meta property="og:site_name" content="元昊的博客">
 <meta property="og:description" content="镜像和容器镜像和容器是 Docker 中最基本的 2 个概念，镜像相当于光盘， 光盘里面存储的数据是只读的， 不会被更改的。我们可以把镜像找作一个模板或者蓝图，而容器是用镜像生成的 Docker 实例。一个镜像可以生成多个容器， 每个容器之间，容器与宿主机之间都是相互隔离的，同时，容器可以快速方便地运行, 也可以方便地删除。在实际应用中，我们甚至可以把容器当作虚拟机来使用。 自动部署与Docker">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-24T15:33:36.757Z">
+<meta property="og:updated_time" content="2018-12-24T15:40:56.281Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="docker介绍深入浅出(-)">
 <meta name="twitter:description" content="镜像和容器镜像和容器是 Docker 中最基本的 2 个概念，镜像相当于光盘， 光盘里面存储的数据是只读的， 不会被更改的。我们可以把镜像找作一个模板或者蓝图，而容器是用镜像生成的 Docker 实例。一个镜像可以生成多个容器， 每个容器之间，容器与宿主机之间都是相互隔离的，同时，容器可以快速方便地运行, 也可以方便地删除。在实际应用中，我们甚至可以把容器当作虚拟机来使用。 自动部署与Docker">
@@ -381,7 +381,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,941
+                  1,943
                 </span>
               
 
@@ -469,7 +469,7 @@
 <p>停止容器， demo 是容器的名字</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stop demo</span><br></pre></td></tr></table></figure>
 <p>可以用 -o 参数查找所有容器, 包括未运行的</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker -o ps</span><br></pre></td></tr></table></figure>
 <p>删除被停止的容器和运行中的容器</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker rm demo</span><br><span class="line">docker rm -f demo</span><br></pre></td></tr></table></figure>
 <h2 id="数据卷与文件挂载"><a href="#数据卷与文件挂载" class="headerlink" title="数据卷与文件挂载"></a>数据卷与文件挂载</h2><p>我们可以在概念上把 Docker 找作虚拟机。当容器被删除的时候， 容器里的所有数据都会被删除，两个不同的容器之间无法互通。基于这些因素 Docker 推出了 数据卷 (volume) 功能。<br>我们可以把数据卷理解为虚拟机的虚拟磁盘， 它是独立于容器的文件，在容器中它破挂载为一个目录的形式。对于容器中的应用来说， 数据卷是透明的， 无法感知它的存在， 它就是一个普通的文件夹。由于数据卷独立于容器而存在, 因此删除容器的时候数据卷不会受到影响。<br>数据卷有以下优点</p>
