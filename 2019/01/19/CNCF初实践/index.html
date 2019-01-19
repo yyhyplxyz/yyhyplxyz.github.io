@@ -111,23 +111,30 @@
 
 
 
-<meta name="description" content="作业要求这次我们要利用虚拟机搭建一个自己的私有云，并完成图形化界面的远程控制。 基本原理​    一般意义上我们只要搭建一个linux系统，再让其可以访问公网，则可以简单的称为是一个云服务器了，但这次我们作业是要考虑到一个计算机有多个多个虚拟系统，即令一台计算机充当多个虚拟专享服务器，多个虚拟机间构成子网，多台计算机再通过路由器，交换机构成子网，从而让服务商方便快捷地管理云资源。 ​    我们的">
+<meta name="description" content="K8S介绍什么是Kubernetes？Kubernetes（k8s）是自动化容器操作的开源平台，这些操作包括部署，调度和节点集群间扩展。我们曾经用过Docker容器技术部署容器，而Docker恰恰可以被看成Kubernetes内部使用的低级别组件。Kubernetes不仅仅支持Docker，还支持Rocket，这是另一种容器技术。 使用Kubernetes可以：  自动化容器的部署和复制  随时扩">
 <meta property="og:type" content="article">
-<meta property="og:title" content="搭建私有云桌面">
-<meta property="og:url" content="http://yyhyplxyz.github.io/2018/09/13/服务计算第一次作业/index.html">
+<meta property="og:title" content="CNCF初实践">
+<meta property="og:url" content="http://yyhyplxyz.github.io/2019/01/19/CNCF初实践/index.html">
 <meta property="og:site_name" content="元昊的博客">
-<meta property="og:description" content="作业要求这次我们要利用虚拟机搭建一个自己的私有云，并完成图形化界面的远程控制。 基本原理​    一般意义上我们只要搭建一个linux系统，再让其可以访问公网，则可以简单的称为是一个云服务器了，但这次我们作业是要考虑到一个计算机有多个多个虚拟系统，即令一台计算机充当多个虚拟专享服务器，多个虚拟机间构成子网，多台计算机再通过路由器，交换机构成子网，从而让服务商方便快捷地管理云资源。 ​    我们的">
+<meta property="og:description" content="K8S介绍什么是Kubernetes？Kubernetes（k8s）是自动化容器操作的开源平台，这些操作包括部署，调度和节点集群间扩展。我们曾经用过Docker容器技术部署容器，而Docker恰恰可以被看成Kubernetes内部使用的低级别组件。Kubernetes不仅仅支持Docker，还支持Rocket，这是另一种容器技术。 使用Kubernetes可以：  自动化容器的部署和复制  随时扩">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/try4.png">
-<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/try5.png">
-<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/try6.png">
-<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/try8.PNG">
-<meta property="og:image" content="http://p35v64prn.bkt.clouddn.com/远程控制.PNG">
-<meta property="og:updated_time" content="2018-09-13T11:40:07.000Z">
+<meta property="og:image" content="http://dockone.io/uploads/article/20151230/d56441427680948fb56a00af57bda690.png">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1fzbo7ddd8gj31nb0u0u0x.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1fzbo844jbsj31nb0u0hdt.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1fzboa3nxsvj319t0u0khn.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNc79gy1fzbocg52qpj31mb0u0e81.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNc79gy1fzbpuuotc1j320i03s46p.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNc79gy1fzbqi88n81j324o0oahdu.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79gy1fzbqj0znz0j315w0lydme.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79gy1fzbqoh1w7vj31rl0u0ato.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNc79gy1fzbqp7y79hj31rl0u0gx3.jpg">
+<meta property="og:image" content="http://dockone.io/uploads/article/20151230/5e2bad1a25e33e2d155da81da1d3a54b.gif">
+<meta property="og:image" content="http://dockone.io/uploads/article/20151230/125bbccce0b3bbf42abab0e520d9250b.gif">
+<meta property="og:updated_time" content="2019-01-19T03:45:16.271Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="搭建私有云桌面">
-<meta name="twitter:description" content="作业要求这次我们要利用虚拟机搭建一个自己的私有云，并完成图形化界面的远程控制。 基本原理​    一般意义上我们只要搭建一个linux系统，再让其可以访问公网，则可以简单的称为是一个云服务器了，但这次我们作业是要考虑到一个计算机有多个多个虚拟系统，即令一台计算机充当多个虚拟专享服务器，多个虚拟机间构成子网，多台计算机再通过路由器，交换机构成子网，从而让服务商方便快捷地管理云资源。 ​    我们的">
-<meta name="twitter:image" content="http://p35v64prn.bkt.clouddn.com/try4.png">
+<meta name="twitter:title" content="CNCF初实践">
+<meta name="twitter:description" content="K8S介绍什么是Kubernetes？Kubernetes（k8s）是自动化容器操作的开源平台，这些操作包括部署，调度和节点集群间扩展。我们曾经用过Docker容器技术部署容器，而Docker恰恰可以被看成Kubernetes内部使用的低级别组件。Kubernetes不仅仅支持Docker，还支持Rocket，这是另一种容器技术。 使用Kubernetes可以：  自动化容器的部署和复制  随时扩">
+<meta name="twitter:image" content="http://dockone.io/uploads/article/20151230/d56441427680948fb56a00af57bda690.png">
 
 
 
@@ -157,13 +164,13 @@
 
 
 
-  <link rel="canonical" href="http://yyhyplxyz.github.io/2018/09/13/服务计算第一次作业/"/>
+  <link rel="canonical" href="http://yyhyplxyz.github.io/2019/01/19/CNCF初实践/"/>
 
 
 
 
 
-  <title>搭建私有云桌面 | 元昊的博客</title>
+  <title>CNCF初实践 | 元昊的博客</title>
   
 
 
@@ -314,7 +321,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yyhyplxyz.github.io/2018/09/13/服务计算第一次作业/">
+    <link itemprop="mainEntityOfPage" href="http://yyhyplxyz.github.io/2019/01/19/CNCF初实践/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Jack Yang">
@@ -331,7 +338,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">搭建私有云桌面</h1>
+          <h1 class="post-title" itemprop="name headline">CNCF初实践</h1>
         
 
         <div class="post-meta">
@@ -343,8 +350,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-13T15:04:19+08:00">
-                2018-09-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-19T09:30:18+08:00">
+                2019-01-19
               </time>
             
 
@@ -361,7 +368,7 @@
 
           
           
-             <span id="/2018/09/13/服务计算第一次作业/" class="leancloud_visitors" data-flag-title="搭建私有云桌面">
+             <span id="/2019/01/19/CNCF初实践/" class="leancloud_visitors" data-flag-title="CNCF初实践">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -387,7 +394,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,080
+                  2,946
                 </span>
               
 
@@ -403,7 +410,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4
+                  12
                 </span>
               
             </div>
@@ -424,44 +431,162 @@
       
 
       
-        <h2 id="作业要求"><a href="#作业要求" class="headerlink" title="作业要求"></a>作业要求</h2><p>这次我们要利用虚拟机搭建一个自己的私有云，并完成图形化界面的远程控制。</p>
-<h2 id="基本原理"><a href="#基本原理" class="headerlink" title="基本原理"></a>基本原理</h2><p>​    一般意义上我们只要搭建一个linux系统，再让其可以访问公网，则可以简单的称为是一个云服务器了，但这次我们作业是要考虑到一个计算机有多个多个虚拟系统，即令一台计算机充当多个虚拟专享服务器，多个虚拟机间构成子网，多台计算机再通过路由器，交换机构成子网，从而让服务商方便快捷地管理云资源。</p>
-<p>​    我们的作业实现思路就是为虚拟机创建两张虚拟网卡，它们分别构成了一个子网络，一张网卡是NAT模式，另一张网卡是仅主机模式。在NAT模式中，主机网卡直接与虚拟NAT设备相连，然后虚拟NAT设备与虚拟DHCP服务器一起连接在虚拟交换机VMnet8上，这样就实现了虚拟机联通外网。而Host-Only模式将虚拟机与外网隔开，使得虚拟机成为一个独立的系统，只与主机相互通讯，从而构成了一个内网。</p>
-<p>​    主要结构如下。</p>
-<p><img src="http://p35v64prn.bkt.clouddn.com/try4.png" alt="git"></p>
-<h2 id="环境安装配置"><a href="#环境安装配置" class="headerlink" title="环境安装配置"></a>环境安装配置</h2><p>​    我们首先下载<a href="https://www.vmware.com/cn/products/workstation-pro/workstation-pro-evaluation.html" target="_blank" rel="noopener">VMware软件</a>，网上可以很容易地找到破解码。接着我们可以到高校ftp上下载<a href="https://mirror.tuna.tsinghua.edu.cn/centos/7.5.1804/isos/x86_64/" target="_blank" rel="noopener">centos</a>系统。</p>
-<p>​    软件安装完毕后，我们将系统添加到VMware workstation pro中，随后我们根据提示设置用户名密码等，完成系统安装即可。进入系统后，我们输入命令</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmtui</span><br></pre></td></tr></table></figure>
-<p>打开图形化界面然后选择激活网卡，如图所示。</p>
-<p><img src="http://p35v64prn.bkt.clouddn.com/try5.png" alt="git"></p>
-<p><img src="http://p35v64prn.bkt.clouddn.com/try6.png" alt="git"></p>
-<p>接着我们在VMware里添加虚拟网卡，在虚拟机-&gt;设置-&gt;添加硬件-&gt;网络适配器中选择仅主机模式 ，如下图所示</p>
-<p><img src="http://p35v64prn.bkt.clouddn.com/try8.PNG" alt="git"></p>
-<p>此时我们配置了两张网卡，进入系统看下能否ping通百度等网站，如果不成功则需要进行网络开启的操作。运行如下命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/sysconfig/network-scripts/</span><br></pre></td></tr></table></figure>
-<p>打开某个对应系统网卡的文件，不清楚可以使用<code>ifconfig</code>命令来查看网卡和ip。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi ifcfg-ens33</span><br></pre></td></tr></table></figure>
-<p>将ONBOOT设置成yes，接着重启网络服务</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service network restart</span><br></pre></td></tr></table></figure>
-<p>这样，我们就做到了开机自动启动网络服务，我们可以上网了。</p>
-<p>​    然后，我们更新和安装一些必要的软件</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">yum install wegt</span><br><span class="line">yum update</span><br><span class="line"></span><br><span class="line">yum groupinstall "X Window System"</span><br><span class="line">yum groupinstall "GNOME Desktop"</span><br><span class="line">systemctl set-default multi-user.target  //设置成命令模式</span><br><span class="line">systemctl set-default graphical.target  //设置成图形模式</span><br><span class="line">shutdown -r now #重启</span><br></pre></td></tr></table></figure>
-<p>​    此时我们重启后看到的应该是图形化界面了。</p>
-<p>​    接着，我们使用 windows 的远程桌面控制来访问我们的虚拟机。但是 windows 的远程桌面使用 RDP 协议，而 linux 系统原生并不支持此协议。因此我们需要在 linux 系统安装 XRDP 来支持协议。</p>
-<p>- 下载安装</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">su #图形化界面账号为非root账号，su获取root权限</span><br><span class="line">#root password</span><br><span class="line">yum install epel-release #社区对于yum的补充开源库</span><br><span class="line">yum install xrdp</span><br><span class="line">yum install tigervnc-server</span><br></pre></td></tr></table></figure>
-<p>- 开启 XRDP</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl start xrdp</span><br><span class="line">systemctl enable xrdp</span><br></pre></td></tr></table></figure>
-<p>XRDP 默认监听的端口号是3389 ，我们远程连接就可以使用这个端口号</p>
-<p>- 关闭防火墙</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop firewalld</span><br><span class="line">systemctl disable firewalld</span><br></pre></td></tr></table></figure>
-<p>- 或不关闭防火墙，添加防火墙例外，打开3389端口命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --permanent --zone=public --add-port=3389/tcp</span><br><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
-<p>- 启动xrdp服务，并且设置为开机启动</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl start xrdp</span><br><span class="line">systemctl enable xrdp</span><br></pre></td></tr></table></figure>
-<h2 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h2><p>​    经过了上面的操作步骤后，我们打开远程桌面连接，就可以连接上远程服务器了，实验效果如图所示。</p>
-<p><img src="http://p35v64prn.bkt.clouddn.com/远程控制.PNG" alt="git"></p>
-<p>​    我们需要多个虚拟机的话，那么，刚刚配置的虚拟机，就可以作为 base，我们 clone 这个虚拟机就好了。链接克隆和完整克隆都可以，具体操纵比较简单就不再赘述了，克隆完毕后我们进入新的虚拟机系统，查看ip，同样可以远程连接到这个虚拟机系统上面去。</p>
+        <h2 id="K8S介绍"><a href="#K8S介绍" class="headerlink" title="K8S介绍"></a>K8S介绍</h2><h3 id="什么是Kubernetes？"><a href="#什么是Kubernetes？" class="headerlink" title="什么是Kubernetes？"></a>什么是Kubernetes？</h3><p>Kubernetes（k8s）是自动化容器操作的开源平台，这些操作包括部署，调度和节点集群间扩展。我们曾经用过Docker容器技术部署容器，而Docker恰恰可以被看成Kubernetes内部使用的低级别组件。Kubernetes不仅仅支持Docker，还支持Rocket，这是另一种容器技术。</p>
+<p>使用Kubernetes可以：</p>
+<ul>
+<li>自动化容器的部署和复制 </li>
+<li>随时扩展或收缩容器规模 </li>
+<li>将容器组织成组，并且提供容器间的负载均衡 </li>
+<li>很容易地升级应用程序容器的新版本 </li>
+<li>提供容器弹性，如果容器失效就替换它</li>
+</ul>
+<p>实际上，使用Kubernetes只需一个部署文件，使用一条命令就可以部署多层容器（前端，后台等）的完整集群：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ kubectl create -f single-config-file.yaml</span><br></pre></td></tr></table></figure>
+<h3 id="集群"><a href="#集群" class="headerlink" title="集群"></a>集群</h3><p>集群是一组节点，这些节点可以是物理服务器或者虚拟机，之上安装了Kubernetes平台。下图展示这样的集群。</p>
+<p>这里可以看到一个典型的Kubernetes架构图。</p>
+<p><a href="http://dockone.io/uploads/article/20151230/d56441427680948fb56a00af57bda690.png" target="_blank" rel="noopener"><img src="http://dockone.io/uploads/article/20151230/d56441427680948fb56a00af57bda690.png" alt="1.png"></a></p>
+<p>集群拥有一个Kubernetes Master（紫色方框）。Kubernetes Master提供集群的独特视角，并且拥有一系列组件来操控多个主机提供高可用的服务。</p>
+<h2 id="搭建K8S集群与基本工具"><a href="#搭建K8S集群与基本工具" class="headerlink" title="搭建K8S集群与基本工具"></a>搭建K8S集群与基本工具</h2><h3 id="安装准备"><a href="#安装准备" class="headerlink" title="安装准备"></a>安装准备</h3><p>安装过程将在Ubuntu 16.04系统上（一台master node，两台worker node）进行</p>
+<h3 id="VirtualBox搭建集群"><a href="#VirtualBox搭建集群" class="headerlink" title="VirtualBox搭建集群"></a>VirtualBox搭建集群</h3><ol>
+<li>下载ubuntu镜像文件</li>
+<li>创建新的虚拟机镜像模板</li>
+<li>挂载我们在第一步下载的镜像文件</li>
+<li>创建全局NAT网络</li>
+<li>克隆三个虚拟机，k8s1（master，k8s2，k8s3</li>
+<li>网络类型NAT网络，选择我们第四步创建的网络名称</li>
+<li>NAT网络配置端口转发规则，确保可以通过ssh本地连接虚拟机</li>
+</ol>
+<h3 id="安装容器引擎"><a href="#安装容器引擎" class="headerlink" title="安装容器引擎"></a>安装容器引擎</h3><p>安装docker，具体过程略</p>
+<h3 id="安装各组件和命令行工具"><a href="#安装各组件和命令行工具" class="headerlink" title="安装各组件和命令行工具"></a>安装各组件和命令行工具</h3><ol>
+<li><p>添加kuberbates apt源</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/apt/sources.list</span><br><span class="line"><span class="meta">#</span><span class="bash"> 系统安装源</span></span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial main restricted</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-updates main restricted</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial universe</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-updates universe</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-updates multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ xenial-backports main restricted universe multiverse</span><br><span class="line"><span class="meta">#</span><span class="bash"> kubeadm及kubernetes组件安装源</span></span><br><span class="line">deb https://mirrors.aliyun.com/kubernetes/apt kubernetes-xenial main</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>apt安装kublet， kubeadm，kubectl</p>
+</li>
+<li><p>初始化master节点，其中192.168.16.0/20为本地IP，<em>apiserver</em>-<em>advertise</em>-<em>address</em>是API server 用来告知集群中其它成员的地址</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubeadm init --apiserver-advertise-address=10.0.25 --pod-network-cidr=192.168.16.0/20</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fzbo7ddd8gj31nb0u0u0x.jpg" alt=""></p>
+<ol>
+<li>配置kubectl环境变量</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export KUBECONFIG=/etc/kubernates/admin.conf</span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>查看当前节点</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get pods -n kube-system -o wide</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fzbo844jbsj31nb0u0hdt.jpg" alt=""></p>
+<p>我们呢会发现此时除了dns服务，其它都可以使用</p>
+<h3 id="安装集群网络"><a href="#安装集群网络" class="headerlink" title="安装集群网络"></a>安装集群网络</h3><p>一个好的网络方案，可以让多个容器构成的基于微服务架构的应用可以运行在任何地方：主机，多主机，云上或者数据中心。应用程序使用网络就好像容器是插在同一个网络交换机上一样，不需要配置端口映射，连接等。</p>
+<p>我们这里选择比较常用的Weave网络，它通过创建虚拟网络使docker容器能够跨主机通信并能够自动相互发现。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -L "https://cloud.weave.works/k8s/net?k8s-version4(kubectl v ersion I base64 I tr -d '\n')" &gt; weave.yaml</span><br></pre></td></tr></table></figure>
+<p>接着我们打开该文件，如下，新添加<code>-name:IPALLOC_RANGE value:192.168.16.0/20</code>字段，其中ip地址是我们在第一步创建的master节点的ip。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fzboa3nxsvj319t0u0khn.jpg" alt=""></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f weave.yaml</span><br></pre></td></tr></table></figure>
+<h3 id="节点加入集群网络"><a href="#节点加入集群网络" class="headerlink" title="节点加入集群网络"></a>节点加入集群网络</h3><ul>
+<li><p>现状</p>
+<p>此时master节点的各组件已安装完毕，但集群中只有master一个节点。</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fzbocg52qpj31mb0u0e81.jpg" alt=""></p>
+</li>
+<li><p>k8s2节点加入集群</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubeadm join 192.168.0.200:6443 --token rw4enn.mvk547juq7qi2b5f --discovery-token-ca-cert-hash sha256:ba260d5191213382a806a9a7d92c9e6bb09061847c7914b1ac584d0c69471579</span><br></pre></td></tr></table></figure>
+<p>k8s3节点以此类推，值得注意的是，一般master节点不承担工作负荷。</p>
+</li>
+</ul>
+<h3 id="非master节点上管理集群"><a href="#非master节点上管理集群" class="headerlink" title="非master节点上管理集群"></a>非master节点上管理集群</h3><ol>
+<li><p>将master节点上的/etc/kubernetes/admin.conf分发到各worker节点的对应目录下</p>
+</li>
+<li><p>设置环境变量</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export KUBECONFIG=/etc/kubernates/admin.conf</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="性能监控"><a href="#性能监控" class="headerlink" title="性能监控"></a>性能监控</h3><ol>
+<li><p>安装dashboard</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/master/src/deploy/recommended/kubernetes-dashboard.yaml</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fzbpuuotc1j320i03s46p.jpg" alt=""></p>
+</li>
+<li><p>访问dashboard</p>
+<ul>
+<li><p>建立api server的代理，运行在8001端口</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl proxy</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>设置端口转发规则，本地端口9001的数据转到master节点上去（9091端口）</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -D 9001 root@127.0.0.1 -p 9091</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>浏览器设定代理服务器，本地的数据转发到9001端口，从而访问master节点</p>
+</li>
+<li><p>浏览器输入地址，访问dashboard</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>创建管理用户</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl create -f user.yaml</span><br></pre></td></tr></table></figure>
+<p>创建绑定</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl create -f user-binding.yaml</span><br></pre></td></tr></table></figure>
+<p>user.yaml的文件内容如下</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">vl</span> </span><br><span class="line"><span class="attr">kind:</span> <span class="string">ServiceAccount</span> </span><br><span class="line"><span class="attr">metadata:</span> </span><br><span class="line">	<span class="attr">name:</span> <span class="string">yyhyplxyz</span> </span><br><span class="line">	<span class="attr">namespace:</span> <span class="string">kube</span> <span class="string">system</span></span><br></pre></td></tr></table></figure>
+<p>user-binding.yaml的文件内容如下</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">rbac.authorization.k8s.io/vlbetal</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">ClusterRoleBinding</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">	<span class="attr">name:</span> <span class="attr">dashboard:yyhyplxyz</span> </span><br><span class="line"><span class="attr">roleRef:</span> </span><br><span class="line">	<span class="attr">apiGroup:</span> <span class="string">rbac.authorization.k8s.io</span> </span><br><span class="line">	<span class="attr">kind:</span> <span class="string">ClusterRole</span> </span><br><span class="line">	<span class="attr">name:</span> <span class="string">cluster-admin</span> </span><br><span class="line"><span class="attr">subjects:</span> </span><br><span class="line">	<span class="attr">kind:</span> <span class="string">lerviceAccount</span> </span><br><span class="line">	<span class="attr">name:</span> <span class="string">yyhyplxyz</span> </span><br><span class="line">	<span class="attr">namespace:</span> <span class="string">kube</span> <span class="string">system</span></span><br></pre></td></tr></table></figure>
+<p>接着，我们查看我们生成的用户密钥</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kubectl get secret -n kube-system #选出恰当的名字</span><br><span class="line">kubectl describe secret/yyhyplxyz token-knfmh -n kube-system</span><br></pre></td></tr></table></figure>
+<p><img src="https://ws4.sinaimg.cn/large/006tNc79gy1fzbqi88n81j324o0oahdu.jpg" alt=""></p>
+<p>复制token数据段</p>
+</li>
+<li><p>浏览器登录，dashboard登录界面</p>
+<p>选择令牌方式登录</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fzbqj0znz0j315w0lydme.jpg" alt=""></p>
+</li>
+</ul>
+</li>
+<li><p>安装Heapster</p>
+<p>这个组件负责k8s集群度量数据采集和容器监控，</p>
+<ul>
+<li><p>我们首先下载Heapster的github开源代码</p>
+</li>
+<li><p>下载镜像文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull anjia0532/heapster grafana amd64:v4.4.3</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在github源码包中的<code>/deploy/ube-config</code>中执行创建influxdb的命令，influxdb是Heapster的后端</p>
+</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl create -f influxdb</span><br></pre></td></tr></table></figure>
+<ul>
+<li>创建角色绑定，在deploy目录下，运行</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl create -f  rbac/heapster-rbac.yaml</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装效果</p>
+<p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fzbqoh1w7vj31rl0u0ato.jpg" alt=""></p>
+<p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fzbqp7y79hj31rl0u0gx3.jpg" alt=""></p>
+</li>
+</ol>
+<h2 id="K8S基本使用"><a href="#K8S基本使用" class="headerlink" title="K8S基本使用"></a>K8S基本使用</h2><h3 id="Pod"><a href="#Pod" class="headerlink" title="Pod"></a>Pod</h3><p>Pod是k8s的最基本的操作单元，包含一个或多个紧密相关的容器，类似于豌豆荚的概念。一个Pod可以被一个容器化的环境看作应用层的“逻辑宿主机”（Logical Host)。一个Pod中的多个容器应用通常是紧耦合的。Pod在Node上被创建、启动或者销毁。</p>
+<p>   为什么k8s使用Pod在容器之上再封装一层呢？一个很重要的原因是Docker容器之间的通信受到Docker网络机制的限制。在Docker的世界中，一个容器需要通过link方式才能访问另一个容器提供的服务（端口）。大量容器之间的link将是一个非常繁重的工作。通过Pod的概念将多个容器组合在一个虚拟的“主机”内，可以实现容器之间仅需通过Localhost就能相互通信了。</p>
+<p>一个Pod中的应用容器共享同一组资源：</p>
+<p>  （1）PID命名空间：Pod中的不同应用程序可以看见其他应用程序的进程ID</p>
+<p>  （2）网络命名空间：Pod中的多个容器能访问同一个IP和端口范围</p>
+<p>  （3）IPC命名空间：Pod中的多个容器能够使用SystemV IPC或POSIX消息队列进行通信。</p>
+<p>  （4）UTS命名空间：Pod中的多个容器共享一个主机名</p>
+<p>  （5）Volumes（共享存储卷）：Pod中的各个容器可以访问在Pod级别定义的Volumes  </p>
+<p>一些Pod有Label。一个Label是attach到Pod的一对键/值对，用来传递用户定义的属性。比如，你可能创建了一个”tier”和“app”标签，通过Label（<strong>tier=frontend, app=myapp</strong>）来标记前端Pod容器，使用Label（<strong>tier=backend, app=myapp</strong>）标记后台Pod。然后可以使用Selectors选择带有特定Label的Pod，并且将Service或者Replication Controller应用到上面。</p>
+<p>pod常常运行在node（物理主机）上。</p>
+<h3 id="Replication-Controller"><a href="#Replication-Controller" class="headerlink" title="Replication Controller"></a>Replication Controller</h3><p>Replication Controller确保任意时间都有指定数量的Pod“副本”在运行。如果为某个Pod创建了Replication Controller并且指定3个副本，它会创建3个Pod，并且持续监控它们。如果某个Pod不响应，那么Replication Controller会替换它，保持总数为3.如下面的动画所示：</p>
+<p><a href="http://dockone.io/uploads/article/20151230/5e2bad1a25e33e2d155da81da1d3a54b.gif" target="_blank" rel="noopener"><img src="http://dockone.io/uploads/article/20151230/5e2bad1a25e33e2d155da81da1d3a54b.gif" alt="2.gif"></a></p>
+<p>如果之前不响应的Pod恢复了，现在就有4个Pod了，那么Replication Controller会将其中一个终止保持总数为3。如果在运行中将副本总数改为5，Replication Controller会立刻启动2个新Pod，保证总数为5。还可以按照这样的方式缩小Pod，这个特性在执行滚动升级时很有用。</p>
+<p> master服务上创建文件node-controller.yaml,为了避免同一个rc定义的pod在同一个node上生成多个pod时，端口冲突，文件中不指定hostPort。replicas指定pod的数量。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">ReplicationController</span> <span class="comment">#指名类型为rc</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line"><span class="attr">   name:</span> <span class="string">node-controller</span> <span class="comment">#rc 名字，创建后的pod名字为  serverrc-随机字符</span></span><br><span class="line"><span class="attr">   labels:</span> </span><br><span class="line"><span class="attr">     name:</span> <span class="string">node-controller</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line"><span class="attr">  replicas:</span> <span class="number">2</span> <span class="comment">#指定副本数量，会一直维持这个数量的副本，如果某节点挂掉，又会立即构建新的来替代　　</span></span><br><span class="line"><span class="attr">  selector:</span></span><br><span class="line"><span class="attr">     name:</span> <span class="string">node-test-pod</span></span><br><span class="line"><span class="attr">  template:</span> </span><br><span class="line"><span class="attr">    metadata:</span></span><br><span class="line"><span class="attr">     labels:</span></span><br><span class="line"><span class="attr">       name:</span> <span class="string">node-test-pod</span> </span><br><span class="line"><span class="attr">    spec:</span></span><br><span class="line"><span class="attr">      containers:</span></span><br><span class="line"><span class="attr">      - name:</span> <span class="string">node-test</span></span><br><span class="line"><span class="attr">        image:</span> <span class="number">192.168</span><span class="number">.174</span><span class="number">.131</span><span class="string">:5000/node-base:1.0</span> <span class="comment">#镜像源</span></span><br><span class="line"><span class="attr">        env:</span></span><br><span class="line"><span class="attr">        - name:</span> <span class="string">ENV_TEST_1</span></span><br><span class="line"><span class="attr">          value:</span> <span class="string">env_test_1</span></span><br><span class="line"><span class="attr">        - name:</span> <span class="string">ENV_TEST_2</span></span><br><span class="line"><span class="attr">          value:</span> <span class="string">env_test_2</span></span><br><span class="line"><span class="attr">        ports:</span></span><br><span class="line"><span class="attr">        - containerPort:</span> <span class="number">80</span> 　<span class="comment">#容器端口</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl create -f node-controller.yaml</span><br></pre></td></tr></table></figure>
+<p>现在已经创建了Pod的一些副本，那么在这些副本上如何均衡负载呢？我们需要的是Service。</p>
+<h3 id="Service"><a href="#Service" class="headerlink" title="Service"></a>Service</h3><p>如果Pods是短暂的，那么重启时IP地址可能会改变，怎么才能从前端容器正确可靠地指向后台容器呢？Service就恰是定义一系列Pod以及访问这些Pod的策略的一层抽象。Service通过Label找到Pod组。现在，假定有2个后台Pod，并且定义后台Service的名称为‘backend-service’，lable选择器为<code>（tier=backend, app=myapp）</code>。backend-service的Service会完成如下两件重要的事情：</p>
+<ul>
+<li>会为Service创建一个本地集群的DNS入口，因此前端Pod只需要DNS查找主机名为 ‘backend-service’，就能够解析出前端应用程序可用的IP地址。</li>
+<li>现在前端已经得到了后台服务的IP地址，但是它应该访问2个后台Pod的哪一个呢？Service在这2个后台Pod之间提供透明的负载均衡，会将请求分发给其中的任意一个（如下面的动画所示）。通过每个Node上运行的代理（kube-proxy）完成。</li>
+</ul>
+<p>下述动画展示了Service的功能。<a href="http://dockone.io/uploads/article/20151230/125bbccce0b3bbf42abab0e520d9250b.gif" target="_blank" rel="noopener"><img src="http://dockone.io/uploads/article/20151230/125bbccce0b3bbf42abab0e520d9250b.gif" alt="3.gif"></a></p>
+<p>有一个特别类型的Kubernetes Service，称为’LoadBalancer’，作为外部负载均衡器使用，在一定数量的Pod之间均衡流量。比如，对于负载均衡Web流量很有用。</p>
+<p>我们再看上面例子，node-test Pod运行了2个副本（replicas），这2个Pod对于前端程序来说没有区别，所以前端程序不关心是哪个后端副本在提供服务。并且后端node-test Pod在发生变化（比如replicas数量变化或某个node挂了，Pod在另一个node重新生成），前端无须跟踪这些变化。“Service”就是用来实现这种解耦的抽象概念。如下，我们可以创建</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Service</span>  <span class="comment">#指定种类为service</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line"><span class="attr">  name:</span> <span class="string">node-service</span>  <span class="comment">#service 名字 提供给调用方使用，调用方无需知道ip  由dns解析服务名为cluster ip</span></span><br><span class="line"><span class="attr">  labels:</span></span><br><span class="line"><span class="attr">    name:</span> <span class="string">node-service</span> <span class="comment">#rc的名字，service将同一名字的rc作为后端node进行负载</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line"><span class="attr">  ports:</span></span><br><span class="line"><span class="attr">  - port:</span> <span class="number">8081</span>  <span class="comment">#service暴露在cluster ip上的端口，clusterIP:port 是提供给集群内部客户访问service的入口</span></span><br><span class="line"><span class="attr">    targetPort:</span> <span class="number">80</span>  <span class="comment">#pod上的端口，从port和nodePort上到来的数据最终经过kube-proxy流入到后端pod的targetPort上进入容器，和rc中的containerPort一致</span></span><br><span class="line"><span class="attr">    protocol:</span> <span class="string">TCP</span>  <span class="comment">#提供给集群外部客户访问service的入口</span></span><br><span class="line"><span class="attr">  selector:</span></span><br><span class="line"><span class="attr">    name:</span> <span class="string">node-test-pod</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -482,7 +607,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://yyhyplxyz.github.io/2018/09/13/服务计算第一次作业/" title="搭建私有云桌面">http://yyhyplxyz.github.io/2018/09/13/服务计算第一次作业/</a>
+    <a href="http://yyhyplxyz.github.io/2019/01/19/CNCF初实践/" title="CNCF初实践">http://yyhyplxyz.github.io/2019/01/19/CNCF初实践/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -504,8 +629,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/30/SQL期中实验报告/" rel="next" title="SQL期中实验报告">
-                <i class="fa fa-chevron-left"></i> SQL期中实验报告
+              <a href="/2018/12/24/docker简介/" rel="next" title="docker介绍深入浅出(-)">
+                <i class="fa fa-chevron-left"></i> docker介绍深入浅出(-)
               </a>
             
           </div>
@@ -513,10 +638,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/09/27/CentOS下Golang配置/" rel="prev" title="CentOS下Golang配置">
-                CentOS下Golang配置 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -745,7 +866,7 @@ var jiathis_config={
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#作业要求"><span class="nav-number">1.</span> <span class="nav-text">作业要求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本原理"><span class="nav-number">2.</span> <span class="nav-text">基本原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境安装配置"><span class="nav-number">3.</span> <span class="nav-text">环境安装配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验结果"><span class="nav-number">4.</span> <span class="nav-text">实验结果</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#K8S介绍"><span class="nav-number">1.</span> <span class="nav-text">K8S介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是Kubernetes？"><span class="nav-number">1.1.</span> <span class="nav-text">什么是Kubernetes？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集群"><span class="nav-number">1.2.</span> <span class="nav-text">集群</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搭建K8S集群与基本工具"><span class="nav-number">2.</span> <span class="nav-text">搭建K8S集群与基本工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装准备"><span class="nav-number">2.1.</span> <span class="nav-text">安装准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#VirtualBox搭建集群"><span class="nav-number">2.2.</span> <span class="nav-text">VirtualBox搭建集群</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装容器引擎"><span class="nav-number">2.3.</span> <span class="nav-text">安装容器引擎</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装各组件和命令行工具"><span class="nav-number">2.4.</span> <span class="nav-text">安装各组件和命令行工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装集群网络"><span class="nav-number">2.5.</span> <span class="nav-text">安装集群网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#节点加入集群网络"><span class="nav-number">2.6.</span> <span class="nav-text">节点加入集群网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非master节点上管理集群"><span class="nav-number">2.7.</span> <span class="nav-text">非master节点上管理集群</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#性能监控"><span class="nav-number">2.8.</span> <span class="nav-text">性能监控</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#K8S基本使用"><span class="nav-number">3.</span> <span class="nav-text">K8S基本使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Pod"><span class="nav-number">3.1.</span> <span class="nav-text">Pod</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Replication-Controller"><span class="nav-number">3.2.</span> <span class="nav-text">Replication Controller</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Service"><span class="nav-number">3.3.</span> <span class="nav-text">Service</span></a></li></ol></li></ol></div>
             
 
           </div>
