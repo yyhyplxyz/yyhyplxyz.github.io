@@ -118,12 +118,12 @@
 <meta property="og:site_name" content="元昊的博客">
 <meta property="og:description" content="导论​    容器利用 Linux内核提供的命名空间技术， 将不同应用程序的运行隔离起来， 并用统一的镜像，来管理应用程序的依赖环境。 这为应用程序的管理和维护， 带来了极大的便捷性， 并进一步催生了微服务、 云原生等新一代技术架构。虽然容器技术有很多优势， 但容器化也会对应用程序的性能带来一定影响。 笔者在完成项目设计的时候偶然发现将web应用容器化后意外地降低了网站的响应时间。因此本文将就此现">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="c:/Users/yyhyplxyz/Desktop/1.bmp">
-<meta property="og:updated_time" content="2019-06-30T04:19:12.030Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/yyhyplxyz/SYSU-xiaoxin-catering/master/document_files/1.jpg">
+<meta property="og:updated_time" content="2019-06-30T04:30:13.244Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="应用容器化后造成的丢包现象与解决方案">
 <meta name="twitter:description" content="导论​    容器利用 Linux内核提供的命名空间技术， 将不同应用程序的运行隔离起来， 并用统一的镜像，来管理应用程序的依赖环境。 这为应用程序的管理和维护， 带来了极大的便捷性， 并进一步催生了微服务、 云原生等新一代技术架构。虽然容器技术有很多优势， 但容器化也会对应用程序的性能带来一定影响。 笔者在完成项目设计的时候偶然发现将web应用容器化后意外地降低了网站的响应时间。因此本文将就此现">
-<meta name="twitter:image" content="c:/Users/yyhyplxyz/Desktop/1.bmp">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/yyhyplxyz/SYSU-xiaoxin-catering/master/document_files/1.jpg">
 
 
 
@@ -425,7 +425,7 @@
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl --max-time 3 http://192.168.0.30</span><br></pre></td></tr></table></figure>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl: (28) Operation timed out after 3000 milliseconds with 0 bytes received</span><br></pre></td></tr></table></figure>
 <p>那么究竟是哪里有可能造成丢包呢？回顾整个网络协议栈，笔者总结了可能产生丢包的原因如下图。</p>
-<p><img src="C:\Users\yyhyplxyz\Desktop\1.bmp" alt="1"></p>
+<p><img src="https://raw.githubusercontent.com/yyhyplxyz/SYSU-xiaoxin-catering/master/document_files/1.jpg" alt="1"></p>
 <p>具体而言，有以下几点：</p>
 <ol>
 <li><p>在两台 电脑连接之间， 可能会发生传输失败的错误， 比如网络拥塞、 线路错误等；</p>
